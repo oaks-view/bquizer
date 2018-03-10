@@ -78,9 +78,9 @@ class HomeScreen extends React.Component {
                             <Icon active style={styles.footerIcons} name="home" />
                             <Text style={styles.footerTexts} uppercase={true}>home</Text>
                         </Button>
-                        <Button vertical>
+                        <Button vertical onPress={() => {this.props.navigation.navigate('QuizScreen')}}>
                             <Icon style={styles.footerIcons} name="th" />
-                            <Text style={styles.footerTexts} uppercase={true}>Topics</Text>
+                            <Text style={styles.footerTexts} uppercase={true}>Quiz</Text>
                         </Button>
                         <Button vertical>
                             <Icon style={styles.footerIcons} name="history" />

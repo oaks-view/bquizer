@@ -25,13 +25,13 @@ class QuizScreen extends React.Component {
                 </View>
                 <Footer>
                     <FooterTab style={styles.footerTab}>
-                        <Button vertical active>
-                            <Icon active style={styles.footerIcons} name="home" />
+                        <Button vertical onPress={() => { this.props.navigation.navigate('HomeScreen')}}>
+                            <Icon  style={styles.footerIcons} name="home" />
                             <Text style={styles.footerTexts} uppercase={true}>home</Text>
                         </Button>
-                        <Button vertical>
-                            <Icon style={styles.footerIcons} name="th" />
-                            <Text style={styles.footerTexts} uppercase={true}>Topics</Text>
+                        <Button vertical active>
+                            <Icon active style={styles.footerIcons} name="th" />
+                            <Text style={styles.footerTexts} uppercase={true}>Quiz</Text>
                         </Button>
                         <Button vertical>
                             <Icon style={styles.footerIcons} name="history" />
