@@ -1,0 +1,3 @@
+rootProject.name = 'bquiz'
+
+include ':app'
