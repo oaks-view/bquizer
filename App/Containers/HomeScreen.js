@@ -21,7 +21,7 @@ class HomeScreen extends React.Component {
                 <View style={{ flex: 1 }}>
                     <View source={images.darkBackground} style={[styles.dashboardMain, { flex: 1 }]}>
                         <View style={[styles.dashboardHeading, { flex: 2 }]}>
-                            <Text uppercase={true} style={styles.h1}>BQUIZ</Text>
+                            <Text uppercase={false} style={styles.h1}>Bquiz</Text>
                             <Text uppercase={false} style={styles.h5}>Your Progress So Far</Text>
                         </View>
 
@@ -30,7 +30,7 @@ class HomeScreen extends React.Component {
                                 <Image source={images.bibleClosed} style={{ height: '80%', width: '80%' }} />
                             </View>
                             <View style={[styles.dashboardBtnContainer, { flex: 5 }]}>
-                                <Button iconLeft style={styles.dashBoardBtn}>
+                                <Button iconLeft style={styles.dashBoardBtn} onPress={() => {this.props.navigation.navigate('QuizScreen')}}>
                                     <Icon name="play-circle" style={[styles.footerIcons, { color: Colors.tomato, alignSelf: 'center' }]} />
                                     <Text uppercase={false} style={[styles.dashBoardBtnTxt, { color: Colors.tomato }]}>Play</Text>
                                 </Button>
