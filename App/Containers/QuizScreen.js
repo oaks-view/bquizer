@@ -29,6 +29,8 @@ class QuizScreen extends React.Component {
         }
 
         this.renderOptionsBtn = this.renderOptionsBtn.bind(this);
+        this.hideAlert = this.hideAlert.bind(this);
+        this.showAlert = this.showAlert.bind(this);
     }
 
     componentDidMount() {
@@ -90,13 +92,15 @@ class QuizScreen extends React.Component {
     }
     
     getCorrectAnswer() {
-        let correctAnswer = this.state.currentQuiz.answers.filter(answer => {
+        let answer = this.state.currentQuiz.answers.filter(answer => {
             if (answer.isCorrect) {
                 return answer;
             }
         })[0];
 
-        return ``;
+        if (answer) {
+            return `The correct answer is: ${answer.option}. ${answer.value}`
+        };
     }
 
     renderDialogContent() {
@@ -132,12 +136,12 @@ class QuizScreen extends React.Component {
                 </View>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
-                    <Text style={{ fontWeight: 'bold', fontSize: 20, color: Colors.teal }}>{this.state.currentRightAnswer}</Text>
+                    <Text style={{ fontWeight: 'bold', fontSize: 20, color: Colors.teal }}>{this.getCorrectAnswer()}</Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
-                    <Button rounded danger><Text>Exit</Text></Button>
-                    <Button success rounded><Text>Continue</Text></Button>
+                    <Button rounded danger onPress={this.hideAlert}><Text>Exit</Text></Button>
+                    <Button success rounded onPress={this.hideAlert}><Text>Continue</Text></Button>
                 </View>
             </View>
         );
@@ -167,7 +171,7 @@ class QuizScreen extends React.Component {
                             </Button>
                         </View>
                     </View>
-                    <PopupDialog
+                    <PopupDialog dismissOnTouchOutside={false}
                         dialogTitle={<DialogTitle title="Quiz Result" />}
                         ref={(popupDialog) => { this.popupDialog = popupDialog; }}>
                         <View style={{ height: '100%', width: '100%', justifyContent: 'flex-start', alignItems: 'center' }}>
