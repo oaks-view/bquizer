@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, ImageBackground, Image, Alert } from 'react-native';
-import { Text, Container, Content, Header, Body, Left, Right, Title, Footer, FooterTab, Button, H3, Thumbnail } from 'native-base';
+import {
+    Text, Container, Content, Header, Body, Left, Right, Card, CardItem,
+    Title, Footer, FooterTab, Button, H3, Thumbnail
+} from 'native-base';
 import styles from './Styles/QuizScreenStyles';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import images from '../Themes/Images';
 import BackgroundImage from '../Components/BackgroundImage';
 import { Colors } from '../Themes/Colors';
-import AwesomeAlert from 'react-native-awesome-alerts';
+import PopupDialog, { DialogTitle } from 'react-native-popup-dialog';
 
 class QuizScreen extends React.Component {
     constructor(props) {
@@ -16,7 +19,6 @@ class QuizScreen extends React.Component {
 
         this.state = {
             selectedAnswer: { isCorrect: false },
-            showAlert: false,
             alertTitle: '',
             alertMessage: '',
             currentQuiz: {
@@ -31,8 +33,6 @@ class QuizScreen extends React.Component {
 
     componentDidMount() {
         this.setQuizSession();
-
-        this.setAlertFeedback();
     }
 
     setQuizSession() {
@@ -64,15 +64,11 @@ class QuizScreen extends React.Component {
     }
 
     showAlert = () => {
-        this.setState({
-            showAlert: true
-        });
+        this.popupDialog.show(() => { console.log('dialog shown now') });
     };
 
     hideAlert = () => {
-        this.setState({
-            showAlert: false
-        });
+        this.popupDialog.dismiss(() => { Alert.alert('dialogn dismissed') });
     };
 
     renderOptionsBtn() {
@@ -92,19 +88,61 @@ class QuizScreen extends React.Component {
             })
         }
     }
+    
+    getCorrectAnswer() {
+        let correctAnswer = this.state.currentQuiz.answers.filter(answer => {
+            if (answer.isCorrect) {
+                return answer;
+            }
+        })[0];
 
-    setAlertFeedback() {
+        return ``;
+    }
+
+    renderDialogContent() {
         let answerCorrect = this.state.selectedAnswer.isCorrect;
 
-        this.alertTitle = answerCorrect ? '!Correct' : '!!!Wrong';
+        let alertTitle = answerCorrect ? 'Your Answer is Correct!!' : 'Your answer is wrong!!';
 
-        this.alertMessage = answerCorrect ? 'You got it right. Good Job'
+        let alertMessage = answerCorrect ? 'You got it right. Good Job'
             : `Wrong Answer! the correct answer is `;
 
         this.state.alertTitleStyle = answerCorrect ? { color: 'green' } : { color: 'red' };
 
         this.state.alertMessageStyle = answerCorrect ? { color: 'green' } : { color: 'red' };
+
+        let titleIcon = answerCorrect ? 'check' : 'times';
+
+        let titleIconColor = answerCorrect ? 'green' : 'red';
+
+        return (
+            <View style={{ width: '80%'}}>
+                <Card style={{ width: '100%', minHeight: 50, maxHeight: 50 }}>
+                    <CardItem style={{ width: '100%', height: '100%' }}>
+                        <Icon style={{ fontWeight: '500', marginRight: 10, fontSize: 30, color: titleIconColor }} active name={titleIcon} />
+                        <Text style={{ fontSize: 16, fontWeight: '600' }}>{alertTitle}</Text>
+                        <Right>
+                            <Icon name="arrow-right" />
+                        </Right>
+                    </CardItem>
+                </Card>
+
+                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 30, color: Colors.teal }}>Your score is: <Text style={{ fontWeight: 'bold', fontSize: 30 }}>246</Text></Text>
+                </View>
+
+                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 20, color: Colors.teal }}>{this.state.currentRightAnswer}</Text>
+                </View>
+
+                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
+                    <Button rounded danger><Text>Exit</Text></Button>
+                    <Button success rounded><Text>Continue</Text></Button>
+                </View>
+            </View>
+        );
     }
+
 
     render() {
         return (
@@ -129,45 +167,14 @@ class QuizScreen extends React.Component {
                             </Button>
                         </View>
                     </View>
-                    {/* <AwesomeAlert
-                        show={this.state.showAlert}
-                        showProgress={false}
-                        title={this.state.alertTitle}
-                        message={this.state.alertMessage}
-                        closeOnTouchOutside={true}
-                        closeOnHardwareBackPress={false}
-                        showCancelButton={!this.state.selectedAnswer.isCorrect}
-                        showConfirmButton={this.state.selectedAnswer.isCorrect}
-                        cancelText="Next Question"
-                        confirmText="Next Question"
-                        confirmButtonColor="#DD6B55"
-                        onCancelPressed={() => {
-                            this.hideAlert();
-                        }}
-                        onConfirmPressed={() => {
-                            this.hideAlert();
-                        }}
-                    /> */}
+                    <PopupDialog
+                        dialogTitle={<DialogTitle title="Quiz Result" />}
+                        ref={(popupDialog) => { this.popupDialog = popupDialog; }}>
+                        <View style={{ height: '100%', width: '100%', justifyContent: 'flex-start', alignItems: 'center' }}>
+                            {this.renderDialogContent()}
+                        </View>
+                    </PopupDialog>
 
-                    <AwesomeAlert
-                        show={this.state.showAlert}
-                        showProgress={false}
-                        title={this.state.alertTitle}
-                        message="I have a message for you!"
-                        closeOnTouchOutside={true}
-                        closeOnHardwareBackPress={false}
-                        showCancelButton={true}
-                        showConfirmButton={true}
-                        cancelText="No, cancel"
-                        confirmText="Yes, delete it"
-                        confirmButtonColor="#DD6B55"
-                        onCancelPressed={() => {
-                            this.hideAlert();
-                        }}
-                        onConfirmPressed={() => {
-                            this.hideAlert();
-                        }}
-                    />
 
                 </View>
                 <Footer>
