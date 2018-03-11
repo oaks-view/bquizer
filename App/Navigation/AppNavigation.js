@@ -9,7 +9,7 @@ const AppNavigation = StackNavigator(
         QuizScreen: { screen: QuizScreen }
 	},
 	{
-		initialRouteName: "QuizScreen",
+		initialRouteName: "HomeScreen",
 		headerMode: "none"
 	}
 );

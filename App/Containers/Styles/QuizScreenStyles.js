@@ -24,7 +24,18 @@ const styles = {
     question: {
       justifyContent: 'center',
       alignItems: 'center'  
-    }
+    },
+    footerIcons: {
+        color: Colors.silver,
+        fontSize: 30
+    },
+    footerTexts: {
+        fontWeight: 'bold',
+        color: Colors.silver
+    },
+    footerTab: {
+        backgroundColor: Colors.lightGrey
+    },
 }
 
 export default styles;
