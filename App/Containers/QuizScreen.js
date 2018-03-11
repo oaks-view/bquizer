@@ -11,6 +11,11 @@ import BackgroundImage from '../Components/BackgroundImage';
 import { Colors } from '../Themes/Colors';
 import PopupDialog, { DialogTitle } from 'react-native-popup-dialog';
 
+import BibleSearch from 'blble-search';
+var bibleApi = new BibleSearch(require('../Data/Config.json').key);
+
+import quiz from '../Data/Questions';
+
 class QuizScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -25,6 +30,7 @@ class QuizScreen extends React.Component {
                 question: '',
                 answers: []
             },
+            level: 1,
             quizIndex: 0
         }
 
@@ -34,30 +40,12 @@ class QuizScreen extends React.Component {
     }
 
     componentDidMount() {
-        this.setQuizSession();
+        this.setQuizSession(this.state.level);
     }
 
-    setQuizSession() {
-        let quizz = [
-            {
-                question: 'Who was the first man to ever walk the earth?',
-                answers: [
-                    { value: 'Will Smith', isCorrect: false, option: 'A' },
-                    { value: 'Jason Statham', isCorrect: false, option: 'B' },
-                    { value: 'Jackie Chan', isCorrect: false, option: 'C' },
-                    { value: 'Adam', isCorrect: true, option: 'D' }
-                ]
-            },
-            {
-                question: 'I am th way, the truth and the life. Who said this?',
-                answers: [
-                    { value: 'Apostle Paul', isCorrect: false, option: 'A' },
-                    { value: 'Jesus Christ', isCorrect: true, option: 'B' },
-                    { value: 'John Smith', isCorrect: false, option: 'C' }
-                ]
-            }
-        ];
-
+    setQuizSession(level) {
+        const key = `level${level}`;
+        let quizz = quiz[key];
         this.setState((prevState) => {
             return {
                 currentQuiz: quizz[prevState.quizIndex]
