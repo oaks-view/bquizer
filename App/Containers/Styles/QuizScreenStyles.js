@@ -36,6 +36,9 @@ const styles = {
     footerTab: {
         backgroundColor: Colors.lightGrey
     },
+    selectedOption: {
+        color: Colors.lime
+    }
 }
 
 export default styles;

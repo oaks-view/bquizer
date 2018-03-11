@@ -14,6 +14,10 @@ class QuizScreen extends React.Component {
 
         this.question = 'Who played Mirandas boyfriend robert in the movie, cloes art?';
 
+        this.state = {
+            selectedAnswer: ''
+        }
+
         this.answers = [
             { value: 'Will Smith', isCorrect: false, option: 'A' },
             { value: 'Jason Statham', isCorrect: false, option: 'B' },
@@ -26,8 +30,10 @@ class QuizScreen extends React.Component {
     renderOptionsBtn() {
         return this.answers.map(answer => {
             return (
-                <Button style={{ backgroundColor: Colors.darkBrownTransparent, marginBottom: 10}} key={answer.option}>
-                    <Text uppercase={false}>
+                <Button style={{ backgroundColor: Colors.darkBrownTransparent, marginBottom: 10}} key={answer.option} onPress={() => {
+                    this.setState({ selectedAnswer: answer})
+                }}>
+                    <Text uppercase={false} style={[this.state.selectedAnswer.option === answer.option && styles.selectedOption]}>
                         {`${answer.option}. ${answer.value}`}
                     </Text>
                 </Button>
@@ -49,8 +55,13 @@ class QuizScreen extends React.Component {
                         <View style={[styles.question, { flex: 4 }]}>
                             <Text style={{ color: Colors.white, fontSize: 20 }}>{this.question}</Text>
                         </View>
-                        <View style={[styles.options, { flex: 6 }]}>
+                        <View style={[styles.options, { flex: 4 }]}>
                             {this.renderOptionsBtn()}
+                        </View>
+                        <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
+                            <Button rounded style={{alignSelf: 'center', justifyContent: 'center', alignItems:'center', backgroundColor: Colors.tomatoFaded, minWidth: 150}}>
+                                <Text style={{color: Colors.silver, fontSize: 20, alignItems: 'center', fontWeight: 'bold', borderColor: Colors.tomato, textAlign: 'center'}}>NEXT</Text>
+                            </Button>
                         </View>
                     </View>
                 </View>
