@@ -18,19 +18,20 @@ class QuizScreen extends React.Component {
         this.question = 'Who played Mirandas boyfriend robert in the movie, cloes art?';
 
         this.state = {
+            quizz: [],
             selectedAnswer: { isCorrect: false },
-            alertTitle: '',
-            alertMessage: '',
             currentQuiz: {
                 question: '',
                 answers: []
             },
-            quizIndex: 0
+            quizIndex: 0,
+            optionSelected: false
         }
 
         this.renderOptionsBtn = this.renderOptionsBtn.bind(this);
         this.hideAlert = this.hideAlert.bind(this);
         this.showAlert = this.showAlert.bind(this);
+        this.loadNextQuestion = this.loadNextQuestion.bind(this);
     }
 
     componentDidMount() {
@@ -60,17 +61,22 @@ class QuizScreen extends React.Component {
 
         this.setState((prevState) => {
             return {
-                currentQuiz: quizz[prevState.quizIndex]
+                currentQuiz: quizz[prevState.quizIndex],
+                quizz: quizz
             }
         });
     }
 
     showAlert = () => {
-        this.popupDialog.show(() => { console.log('dialog shown now') });
+        if (this.state.optionSelected) {
+            this.popupDialog.show(() => { console.log('dialog shown now') });
+        } else {
+            Alert.alert('You must select an answer first');
+        }
     };
 
     hideAlert = () => {
-        this.popupDialog.dismiss(() => { Alert.alert('dialogn dismissed') });
+        this.popupDialog.dismiss(() => { console.log('dialogn dismissed') });
     };
 
     renderOptionsBtn() {
@@ -80,7 +86,7 @@ class QuizScreen extends React.Component {
             return answers.map(answer => {
                 return (
                     <Button style={{ backgroundColor: Colors.darkBrownTransparent, marginBottom: 10 }} key={answer.option} onPress={() => {
-                        this.setState({ selectedAnswer: answer })
+                        this.setState({ selectedAnswer: answer, optionSelected: true })
                     }}>
                         <Text uppercase={false} style={[this.state.selectedAnswer.option === answer.option && styles.selectedOption]}>
                             {`${answer.option}. ${answer.value}`}
@@ -101,6 +107,27 @@ class QuizScreen extends React.Component {
         if (answer) {
             return `The correct answer is: ${answer.option}. ${answer.value}`
         };
+    }
+
+    loadNextQuestion() {
+        this.hideAlert();
+
+        let quizIndex = this.state.quizIndex + 1;
+        let quizzLength = this.state.quizz.length;
+
+        if (quizIndex < quizzLength) {
+            this.setState(prevState => {
+                return {
+                    quizIndex: quizIndex,
+                    currentQuiz: prevState.quizz[quizIndex],
+                    selectedAnswer: { isCorrect: false },
+                    optionSelected: false,
+                }
+            })
+        } else {
+            Alert.alert('Level Completed', 'You have completed this level, Would you like to move to a new one');
+        }
+        //
     }
 
     renderDialogContent() {
@@ -131,9 +158,9 @@ class QuizScreen extends React.Component {
                     </CardItem>
                 </Card>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
+                {/* <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
                     <Text style={{ fontWeight: 'bold', fontSize: 30, color: Colors.teal }}>Your score is: <Text style={{ fontWeight: 'bold', fontSize: 30 }}>246</Text></Text>
-                </View>
+                </View> */}
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
                     <Text style={{ fontWeight: 'bold', fontSize: 20, color: Colors.teal }}>{this.getCorrectAnswer()}</Text>
@@ -141,7 +168,7 @@ class QuizScreen extends React.Component {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 10, }}>
                     <Button rounded danger onPress={this.hideAlert}><Text>Exit</Text></Button>
-                    <Button success rounded onPress={this.hideAlert}><Text>Continue</Text></Button>
+                    <Button success rounded onPress={this.loadNextQuestion}><Text>Continue</Text></Button>
                 </View>
             </View>
         );
