@@ -10,6 +10,7 @@ import images from '../Themes/Images';
 import BackgroundImage from '../Components/BackgroundImage';
 import { Colors } from '../Themes/Colors';
 import PopupDialog, { DialogTitle } from 'react-native-popup-dialog';
+import { localStorageKeys } from '../Common/Constants';
 
 class QuizScreen extends React.Component {
     constructor(props) {
