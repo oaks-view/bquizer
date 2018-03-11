@@ -12,8 +12,8 @@ import { Colors } from '../Themes/Colors';
 import PopupDialog, { DialogTitle } from 'react-native-popup-dialog';
 import { localStorageKeys } from '../Common/Constants';
 
-import BibleSearch from 'blble-search';
-var bibleApi = new BibleSearch(require('../Data/Config.json').key);
+// import BibleSearch from 'blble-search';
+// var bibleApi = new BibleSearch(require('../Data/Config.json').key);
 
 import quiz from '../Data/Questions';
 
