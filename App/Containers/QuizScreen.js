@@ -39,6 +39,7 @@ class QuizScreen extends React.Component {
         this.hideAlert = this.hideAlert.bind(this);
         this.showAlert = this.showAlert.bind(this);
         this.loadNextQuestion = this.loadNextQuestion.bind(this);
+        this.changeLevel = this.changeLevel.bind(this);
     }
 
     componentDidMount() {
@@ -85,17 +86,30 @@ class QuizScreen extends React.Component {
             })
         }
     }
-    
-    getCorrectAnswer() {
-        let answer = this.state.currentQuiz.answers.filter(answer => {
-            if (answer.isCorrect) {
-                return answer;
-            }
-        })[0];
 
-        if (answer) {
-            return `The correct answer is: ${answer.option}. ${answer.value}`
-        };
+    getCorrectAnswer() {
+
+        if (this.state.currentQuiz.answers) {
+            let answer = this.state.currentQuiz.answers.filter(answer => {
+                if (answer.isCorrect) {
+                    return answer;
+                }
+            })[0];
+
+            if (answer) {
+                return `The correct answer is: ${answer.option}. ${answer.value}`
+            };
+        }
+    }
+
+    changeLevel() {
+        this.setState(prevState => {
+            return {
+                level: prevState.level + 1
+            }
+        }, () => {
+            this.setQuizSession(this.state.level);
+        })
     }
 
     loadNextQuestion() {
@@ -103,6 +117,8 @@ class QuizScreen extends React.Component {
 
         let quizIndex = this.state.quizIndex + 1;
         let quizzLength = this.state.quizz.length;
+
+        let self = this;
 
         if (quizIndex < quizzLength) {
             this.setState(prevState => {
@@ -114,7 +130,13 @@ class QuizScreen extends React.Component {
                 }
             })
         } else {
-            Alert.alert('Level Completed', 'You have completed this level, Would you like to move to a new one');
+            Alert.alert(
+                'Level Completed',
+                'You have completed this level, Would you like to move to a new one',
+                [
+                    { text: 'OK', onPress: self.changeLevel() }
+                ]
+            );
         }
         //
     }
@@ -136,7 +158,7 @@ class QuizScreen extends React.Component {
         let titleIconColor = answerCorrect ? 'green' : 'red';
 
         return (
-            <View style={{ width: '80%'}}>
+            <View style={{ width: '80%' }}>
                 <Card style={{ width: '100%', minHeight: 50, maxHeight: 50 }}>
                     <CardItem style={{ width: '100%', height: '100%' }}>
                         <Icon style={{ fontWeight: '500', marginRight: 10, fontSize: 30, color: titleIconColor }} active name={titleIcon} />
@@ -170,7 +192,7 @@ class QuizScreen extends React.Component {
                 <Header style={styles.header}>
                     {/* <Left /> */}
                     <Body style={styles.headerBody}>
-                        <Title style={styles.title}>BQuiz</Title>
+                        <Title style={styles.title}>Level {this.state.level}</Title>
                     </Body>
                 </Header>
                 <View style={{ flex: 1 }}>
