@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import images from '../Themes/Images';
 import BackgroundImage from '../Components/BackgroundImage';
 import { Colors } from '../Themes/Colors';
-// import FIcon from 'react-native-vector-icons/FontAwesome'
+import { localStorageKeys } from '../Common/Constants';
 
 class HomeScreen extends React.Component {
     render() {
