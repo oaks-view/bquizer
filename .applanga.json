@@ -5,9 +5,9 @@
       "source": [
         {
           "language": "en",
-          "file_format": "angular_translate_json",
+          "file_format": "chrome_i18n_json",
           "path": "./app.json",
-          "tag": "app:language:6588.json"
+          "tag": "app:messages.json"
         }
       ]
     },
@@ -17,9 +17,9 @@
           "exclude_languages": [
             "en"
           ],
-          "file_format": "angular_translate_json",
+          "file_format": "chrome_i18n_json",
           "path": "./<language>.json",
-          "tag": "app:language:6588.json"
+          "tag": "app:messages.json"
         }
       ]
     }
