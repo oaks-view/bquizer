@@ -5,9 +5,9 @@
       "source": [
         {
           "language": "en",
-          "file_format": "nested_json",
+          "file_format": "angular_translate_json",
           "path": "./app.json",
-          "tag": "app:language:5402.json"
+          "tag": "app:language:6588.json"
         }
       ]
     },
@@ -17,9 +17,9 @@
           "exclude_languages": [
             "en"
           ],
-          "file_format": "nested_json",
+          "file_format": "angular_translate_json",
           "path": "./<language>.json",
-          "tag": "app:language:5402.json"
+          "tag": "app:language:6588.json"
         }
       ]
     }
