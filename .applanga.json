@@ -13,13 +13,13 @@
           "language": "en",
           "file_format": "nested_json",
           "path": "./package-lock.json",
-          "tag": "one"
+          "tag": "two"
         },
         {
           "language": "en",
           "file_format": "nested_json",
           "path": "./package.json",
-          "tag": "one"
+          "tag": "three"
         }
       ]
     },
@@ -39,7 +39,7 @@
           ],
           "file_format": "nested_json",
           "path": "./<language>.json",
-          "tag": "one"
+          "tag": "two"
         },
         {
           "exclude_languages": [
@@ -47,7 +47,7 @@
           ],
           "file_format": "nested_json",
           "path": "./<language>.json",
-          "tag": "one"
+          "tag": "three"
         }
       ]
     }
