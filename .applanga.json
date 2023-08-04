@@ -6,6 +6,12 @@
         {
           "language": "en",
           "file_format": "nested_json",
+          "path": "./package-lock.json",
+          "tag": "app:language:7903.json"
+        },
+        {
+          "language": "en",
+          "file_format": "nested_json",
           "path": "./package.json",
           "tag": "app:language:5340.json"
         }
@@ -13,6 +19,14 @@
     },
     "pull": {
       "target": [
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "nested_json",
+          "path": "./<language>.json",
+          "tag": "app:language:7903.json"
+        },
         {
           "exclude_languages": [
             "en"
