@@ -5,9 +5,9 @@
       "source": [
         {
           "language": "en",
-          "file_format": "nested_json",
+          "file_format": "react_nested_json",
           "path": "./app.json",
-          "tag": "app:language.json"
+          "tag": "app:language:2281.json"
         }
       ]
     },
@@ -17,9 +17,9 @@
           "exclude_languages": [
             "en"
           ],
-          "file_format": "nested_json",
+          "file_format": "react_nested_json",
           "path": "./<language>.json",
-          "tag": "app:language.json"
+          "tag": "app:language:2281.json"
         }
       ]
     }
