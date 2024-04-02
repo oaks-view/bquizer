@@ -30,7 +30,7 @@
             "en"
           ],
           "file_format": "react_nested_json",
-          "path": "./<language>.json",
+          "path": "./de.json",
           "tag": "app:language:1904.json"
         },
         {
@@ -38,7 +38,7 @@
             "en"
           ],
           "file_format": "react_nested_json",
-          "path": "./<language>.json",
+          "path": "./es.json",
           "tag": "app:language:6601.json"
         },
         {
@@ -46,7 +46,7 @@
             "en"
           ],
           "file_format": "react_nested_json",
-          "path": "./<language>.json",
+          "path": "./fr.json",
           "tag": "app:language.json"
         }
       ]
