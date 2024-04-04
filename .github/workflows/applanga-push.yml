@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - package-lock.json
+      - app.json
   workflow_dispatch:
     inputs:
       push_targets:
