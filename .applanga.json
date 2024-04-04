@@ -6,7 +6,7 @@
         {
           "language": "en",
           "file_format": "react_nested_json",
-          "path": "./package-lock.json",
+          "path": "./package.json",
           "tag": "app:language.json"
         }
       ]
@@ -18,7 +18,7 @@
             "en"
           ],
           "file_format": "react_nested_json",
-          "path": "./<language>.json",
+          "path": "./de.json",
           "tag": "app:language.json"
         }
       ]
