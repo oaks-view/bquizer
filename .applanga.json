@@ -8,6 +8,18 @@
           "file_format": "react_nested_json",
           "path": "./app.json",
           "tag": "app:language.json"
+        },
+        {
+          "language": "en",
+          "file_format": "react_nested_json",
+          "path": "./package-lock.json",
+          "tag": "app:language:2277.json"
+        },
+        {
+          "language": "en",
+          "file_format": "react_nested_json",
+          "path": "./package.json",
+          "tag": "app:language:3961.json"
         }
       ]
     },
@@ -18,8 +30,24 @@
             "en"
           ],
           "file_format": "react_nested_json",
-          "path": "de.json",
+          "path": "./<language>.json",
           "tag": "app:language.json"
+        },
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "react_nested_json",
+          "path": "./<language>.json",
+          "tag": "app:language:2277.json"
+        },
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "react_nested_json",
+          "path": "./<language>.json",
+          "tag": "app:language:3961.json"
         }
       ]
     }
