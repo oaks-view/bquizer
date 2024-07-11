@@ -4,8 +4,6 @@ on:
     branches:
       - master
     paths:
-      - app.json
-      - package-lock.json
       - package.json
   workflow_dispatch:
     inputs:
