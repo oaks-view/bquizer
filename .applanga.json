@@ -6,6 +6,12 @@
         {
           "language": "en",
           "file_format": "react_nested_json",
+          "path": "./app.json",
+          "tag": "app:language:4235.json"
+        },
+        {
+          "language": "en",
+          "file_format": "react_nested_json",
           "path": "./package.json",
           "tag": "app:language.json"
         }
@@ -13,6 +19,14 @@
     },
     "pull": {
       "target": [
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "react_nested_json",
+          "path": "./<language>.json",
+          "tag": "app:language:4235.json"
+        },
         {
           "exclude_languages": [
             "en"
