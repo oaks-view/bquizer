@@ -5,6 +5,8 @@ on:
       - master
     paths:
       - app.json
+      - app.json
+      - package-lock.json
       - package-lock.json
       - package.json
       - package.json
