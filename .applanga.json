@@ -6,20 +6,14 @@
         {
           "language": "en",
           "file_format": "nested_json",
-          "path": "./app.json",
+          "path": "./App/Data/Config.json",
           "tag": "app:language.json"
         },
         {
           "language": "en",
           "file_format": "nested_json",
-          "path": "./package-lock.json",
-          "tag": "app:language:3291.json"
-        },
-        {
-          "language": "en",
-          "file_format": "nested_json",
-          "path": "./package.json",
-          "tag": "app:language:8452.json"
+          "path": "./ios/bquiz/Images.xcassets/Contents.json",
+          "tag": "app:language:3148.json"
         }
       ]
     },
@@ -30,7 +24,7 @@
             "en"
           ],
           "file_format": "nested_json",
-          "path": "./<language>.json",
+          "path": "./App/Data/<language>.json",
           "tag": "app:language.json"
         },
         {
@@ -38,16 +32,8 @@
             "en"
           ],
           "file_format": "nested_json",
-          "path": "./<language>.json",
-          "tag": "app:language:3291.json"
-        },
-        {
-          "exclude_languages": [
-            "en"
-          ],
-          "file_format": "nested_json",
-          "path": "./<language>.json",
-          "tag": "app:language:8452.json"
+          "path": "./ios/bquiz/Images.xcassets/<language>.json",
+          "tag": "app:language:3148.json"
         }
       ]
     }
