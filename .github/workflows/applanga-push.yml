@@ -6,6 +6,7 @@ on:
     paths:
       - app.json
       - package-lock.json
+      - package.json
   workflow_dispatch:
     inputs:
       push_targets:
