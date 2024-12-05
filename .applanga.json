@@ -6,20 +6,8 @@
         {
           "language": "en",
           "file_format": "nested_json",
-          "path": "./app.json",
-          "tag": "app:language:2419.json"
-        },
-        {
-          "language": "en",
-          "file_format": "nested_json",
           "path": "./package-lock.json",
-          "tag": "app:language:5921.json"
-        },
-        {
-          "language": "en",
-          "file_format": "nested_json",
-          "path": "./package.json",
-          "tag": "app:language.json"
+          "tag": "app:language:3291.json"
         }
       ]
     },
@@ -31,23 +19,7 @@
           ],
           "file_format": "nested_json",
           "path": "./<language>.json",
-          "tag": "app:language:2419.json"
-        },
-        {
-          "exclude_languages": [
-            "en"
-          ],
-          "file_format": "nested_json",
-          "path": "./<language>.json",
-          "tag": "app:language:5921.json"
-        },
-        {
-          "exclude_languages": [
-            "en"
-          ],
-          "file_format": "nested_json",
-          "path": "./<language>.json",
-          "tag": "app:language.json"
+          "tag": "app:language:3291.json"
         }
       ]
     }
