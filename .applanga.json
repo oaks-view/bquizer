@@ -1,25 +1,19 @@
 {
   "app": {
-    "base_language": "de",
+    "base_language": "en",
     "push": {
       "source": [
         {
-          "language": "de",
+          "language": "en",
           "file_format": "nested_json",
           "path": "./app.json",
           "tag": "app:language:2419.json"
         },
         {
-          "language": "de",
+          "language": "en",
           "file_format": "nested_json",
           "path": "./package-lock.json",
           "tag": "app:language:5921.json"
-        },
-        {
-          "language": "de",
-          "file_format": "nested_json",
-          "path": "./package.json",
-          "tag": "app:language:4187.json"
         }
       ]
     },
@@ -27,7 +21,7 @@
       "target": [
         {
           "exclude_languages": [
-            "de"
+            "en"
           ],
           "file_format": "nested_json",
           "path": "./<language>.json",
@@ -35,19 +29,11 @@
         },
         {
           "exclude_languages": [
-            "de"
+            "en"
           ],
           "file_format": "nested_json",
           "path": "./<language>.json",
           "tag": "app:language:5921.json"
-        },
-        {
-          "exclude_languages": [
-            "de"
-          ],
-          "file_format": "nested_json",
-          "path": "./<language>.json",
-          "tag": "app:language:4187.json"
         }
       ]
     }
