@@ -4,9 +4,8 @@ on:
     branches:
       - master
     paths:
-      - app.json
-      - package-lock.json
-      - package.json
+      - App/Data/Config.json
+      - ios/bquiz/Images.xcassets/Contents.json
   workflow_dispatch:
     inputs:
       push_targets:
