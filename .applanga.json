@@ -6,7 +6,7 @@
         {
           "language": "en",
           "file_format": "nested_json",
-          "path": "./package.json",
+          "path": "./App/Data/Config.json",
           "tag": "app:language.json"
         }
       ]
@@ -18,7 +18,7 @@
             "en"
           ],
           "file_format": "nested_json",
-          "path": "./<language>.json",
+          "path": "./App/Data/<language>.json",
           "tag": "app:language.json"
         }
       ]
