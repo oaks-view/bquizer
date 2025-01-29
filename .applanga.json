@@ -5,9 +5,45 @@
       "source": [
         {
           "language": "en",
-          "file_format": "nested_json",
-          "path": "./App/Data/Config.json",
-          "tag": "app:language.json"
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/en/common.json",
+          "tag": "storefront:i18n:common.json",
+          "key_prefix": "storefront_i18n_common-"
+        },
+        {
+          "language": "en",
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/en/mcms.json",
+          "tag": "storefront:i18n:mcms.json",
+          "key_prefix": "storefront_i18n_mcms-"
+        },
+        {
+          "language": "en",
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/en/createuser.json",
+          "tag": "storefront:i18n:createuser.json",
+          "key_prefix": "storefront_i18n_createuser-"
+        },
+        {
+          "language": "en",
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/en/rolesandprivileges.json",
+          "tag": "storefront:i18n:rolesandprivileges.json",
+          "key_prefix": "storefront_i18n_rolesandprivileges-"
+        },
+        {
+          "language": "en",
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/en/profile.json",
+          "tag": "storefront:i18n:profile.json",
+          "key_prefix": "storefront_i18n_profile-"
+        },
+        {
+          "language": "en",
+          "file_format": "java_properties",
+          "path": "./core-customize/hybris/bin/custom/markethub-financials/financialsfacades/resources/localization/financialsfacades-locales_en.properties",
+          "tag": "storefront:java_properties:financialsfacades-locales",
+          "key_prefix": "storefront:java_properties:financialsfacades-locales"
         }
       ]
     },
@@ -17,9 +53,54 @@
           "exclude_languages": [
             "en"
           ],
-          "file_format": "nested_json",
-          "path": "./App/Data/<language>.json",
-          "tag": "app:language.json"
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/<language>/common.json",
+          "tag": "storefront:i18n:common.json",
+          "key_prefix": "storefront_i18n_common-"
+        },
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/<language>/mcms.json",
+          "tag": "storefront:i18n:mcms.json",
+          "key_prefix": "storefront_i18n_mcms-"
+        },{
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/<language>/createuser.json",
+          "tag": "storefront:i18n:createuser.json",
+          "key_prefix": "storefront_i18n_createuser-"
+        },
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/<language>/rolesandprivileges.json",
+          "tag": "storefront:i18n:rolesandprivileges.json",
+          "key_prefix": "storefront_i18n_rolesandprivileges-"
+        },
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "react_nested_json",
+          "path": "./js-storefront/markethub/src/assets/i18n-assets/<language>/profile.json",
+          "tag": "storefront:i18n:profile.json",
+          "key_prefix": "storefront_i18n_profile-"
+        },
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "file_format": "java_properties",
+          "path": "./core-customize/hybris/bin/custom/markethub-financials/financialsfacades/resources/localization/financialsfacades-locales_en.properties",
+          "tag": "storefront:java_properties:financialsfacades-locales",
+          "key_prefix": "storefront:java_properties:financialsfacades-locales"
         }
       ]
     }
