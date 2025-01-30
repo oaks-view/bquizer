@@ -82,7 +82,9 @@
           "file_format": "react_nested_json",
           "path": "./js-storefront/markethub/src/assets/i18n-assets/<language>/rolesandprivileges.json",
           "tag": "storefront:i18n:rolesandprivileges.json",
-          "key_prefix": "storefront_i18n_rolesandprivileges-"
+          "key_prefix": "storefront_i18n_rolesandprivileges-",
+          "remove_cr_char": true,
+          "convert_placeholder": true
         },
         {
           "exclude_languages": [
