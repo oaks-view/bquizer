@@ -1,6 +1,11 @@
 {
   "app": {
     "base_language": "en",
+    "branch_id": "6668137d51e3d4b1d3d31f82",
+    "languageMap": {
+      "nb-NO": "no_NO",
+      "zh-Hans": "zh_CN"
+    },
     "push": {
       "source": [
         {
