@@ -1,0 +1,75 @@
+{
+  "app": {
+    "base_language": "en",
+    "push": {
+      "source": [
+        {
+          "path": "./localization/en/common.csv",
+          "file_format": "csv",
+          "tag": "app:language.csv",
+          "language": "en"
+        },
+        {
+          "path": "./localization/en/common.tsv",
+          "file_format": "tsv",
+          "tag": "app:language.tsv",
+          "language": "en"
+        },
+        {
+          "path": "./i18n/en/translations.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
+          "language": "en"
+        },
+        {
+          "path": "./i18n/en/translations.xlsx",
+          "file_format": "xls",
+          "tag": "app:language.xls",
+          "language": "en"
+        }
+      ]
+    },
+    "pull": {
+      "target": [
+        {
+          "path": "./localization/en/<language>.csv",
+          "file_format": "csv",
+          "tag": "app:language.csv",
+          "excludeHeaderRow": true,
+          "excludeBaseLang": true,
+          "exclude_languages": [
+            "en"
+          ]
+        },
+        {
+          "path": "./localization/en/<language>.tsv",
+          "file_format": "tsv",
+          "tag": "app:language.tsv",
+          "excludeHeaderRow": true,
+          "excludeBaseLang": true,
+          "exclude_languages": [
+            "en"
+          ]
+        },
+        {
+          "path": "./i18n/en/<language>.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
+          "exclude_languages": [
+            "en"
+          ]
+        },
+        {
+          "path": "./i18n/en/<language>.xlsx",
+          "file_format": "xls",
+          "tag": "app:language.xls",
+          "excludeHeaderRow": true,
+          "excludeBaseLang": true,
+          "exclude_languages": [
+            "en"
+          ]
+        }
+      ]
+    }
+  }
+}
