@@ -1,5 +1,6 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const XLSX = require('xlsx');
 
 // JSON configuration
 const config = {
@@ -7,87 +8,27 @@ const config = {
     base_language: "en",
     push: {
       source: [
-        {
-          language: "en",
-          file_format: "react_nested_json",
-          path: "./localization/en/common.json",
-          tag: "localization:json:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          language: "en",
-          file_format: "java_properties",
-          path: "./localization/en/common.properties",
-          tag: "localization:properties:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          language: "en",
-          file_format: "csv",
-          path: "./localization/en/common.csv",
-          tag: "localization:csv:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          language: "en",
-          file_format: "tsv",
-          path: "./localization/en/common.tsv",
-          tag: "localization:tsv:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          language: "en",
-          file_format: "xliff",
-          path: "./localization/en/common.xliff",
-          tag: "localization:xliff:common",
-          key_prefix: "localization_common-"
-        }
+        { language: "en", file_format: "react_nested_json", path: "./i18n/en/common.json" },
+        { language: "en", file_format: "java_properties", path: "./i18n/en/messages.properties" },
+        { language: "en", file_format: "xls", path: "./i18n/en/translations.xlsx" },
+        { language: "en", file_format: "tsx", path: "./i18n/en/Translations.tsx" },
+        { language: "en", file_format: "xliff", path: "./i18n/en/translations.xliff" }
       ]
     },
     pull: {
       target: [
-        {
-          exclude_languages: ["en"],
-          file_format: "react_nested_json",
-          path: "./localization/<language>/common.json",
-          tag: "localization:json:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "java_properties",
-          path: "./localization/<language>/common.properties",
-          tag: "localization:properties:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "csv",
-          path: "./localization/<language>/common.csv",
-          tag: "localization:csv:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "tsv",
-          path: "./localization/<language>/common.tsv",
-          tag: "localization:tsv:common",
-          key_prefix: "localization_common-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "xliff",
-          path: "./localization/<language>/common.xliff",
-          tag: "localization:xliff:common",
-          key_prefix: "localization_common-"
-        }
+        { exclude_languages: ["en"], file_format: "react_nested_json", path: "./i18n/<language>/common.json" },
+        { exclude_languages: ["en"], file_format: "java_properties", path: "./i18n/<language>/messages.properties" },
+        { exclude_languages: ["en"], file_format: "xls", path: "./i18n/<language>/translations.xlsx" },
+        { exclude_languages: ["en"], file_format: "tsx", path: "./i18n/<language>/Translations.tsx" },
+        { exclude_languages: ["en"], file_format: "xliff", path: "./i18n/<language>/translations.xliff" }
       ]
     }
   }
 };
 
 // Sample languages for target files
-const targetLanguages = ["es", "de", "fr"]; // Spanish, German, French
+const targetLanguages = ["es", "de", "fr"];
 
 // Sample translation strings
 const sampleStrings = {
@@ -105,44 +46,26 @@ const sampleStrings = {
     checkout: "checkout=Checkout",
     profile: "profile=User Profile"
   },
-  csv: [
-    ["key", "value"],
-    ["welcome", "Welcome"],
-    ["goodbye", "Goodbye"],
-    ["cart", "Shopping Cart"],
-    ["checkout", "Checkout"],
-    ["profile", "User Profile"]
-  ],
-  tsv: [
-    ["key", "value"],
-    ["welcome", "Welcome"],
-    ["goodbye", "Goodbye"],
-    ["cart", "Shopping Cart"],
-    ["checkout", "Checkout"],
-    ["profile", "User Profile"]
-  ],
+  tsx: `export const translations = {
+    welcome: "Welcome",
+    goodbye: "Goodbye",
+    cart: "Shopping Cart",
+    checkout: "Checkout",
+    profile: "User Profile"
+  };`,
   xliff: `<?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2">
-  <file source-language="en" datatype="plaintext" original="messages">
-    <body>
-      <trans-unit id="welcome">
-        <source>Welcome</source>
-      </trans-unit>
-      <trans-unit id="goodbye">
-        <source>Goodbye</source>
-      </trans-unit>
-      <trans-unit id="cart">
-        <source>Shopping Cart</source>
-      </trans-unit>
-      <trans-unit id="checkout">
-        <source>Checkout</source>
-      </trans-unit>
-      <trans-unit id="profile">
-        <source>User Profile</source>
-      </trans-unit>
-    </body>
-  </file>
-</xliff>`
+  <xliff version="1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+      <body>
+        <trans-unit id="welcome">
+          <source>Welcome</source>
+        </trans-unit>
+        <trans-unit id="goodbye">
+          <source>Goodbye</source>
+        </trans-unit>
+      </body>
+    </file>
+  </xliff>`
 };
 
 // Function to create a file with sample content
@@ -153,31 +76,29 @@ function createFile(filePath, content) {
   console.log(`✅ Created: ${filePath}`);
 }
 
-// Function to convert CSV/TSV array to string format
-function convertToDelimitedFormat(array, delimiter) {
-  return array.map(row => row.join(delimiter)).join("\n");
+// Function to create an Excel file
+function createExcelFile(filePath, data) {
+  const workbook = XLSX.utils.book_new();
+  const worksheet = XLSX.utils.aoa_to_sheet(data);
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Translations");
+  XLSX.writeFile(workbook, filePath);
+  console.log(`✅ Created Excel: ${filePath}`);
 }
 
 // Generate source files
 config.app.push.source.forEach(fileConfig => {
   let content = "";
-
-  switch (fileConfig.file_format) {
-    case "react_nested_json":
-      content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
-      break;
-    case "java_properties":
-      content = Object.values(sampleStrings.java_properties).join("\n");
-      break;
-    case "csv":
-      content = convertToDelimitedFormat(sampleStrings.csv, ",");
-      break;
-    case "tsv":
-      content = convertToDelimitedFormat(sampleStrings.tsv, "\t");
-      break;
-    case "xliff":
-      content = sampleStrings.xliff;
-      break;
+  
+  if (fileConfig.file_format === "react_nested_json") {
+    content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
+  } else if (fileConfig.file_format === "java_properties") {
+    content = Object.values(sampleStrings.java_properties).join("\n");
+  } else if (fileConfig.file_format === "tsx") {
+    content = sampleStrings.tsx;
+  } else if (fileConfig.file_format === "xliff") {
+    content = sampleStrings.xliff;
+  } else if (fileConfig.file_format === "xls") {
+    return createExcelFile(fileConfig.path, [["Key", "Translation"], ["welcome", "Welcome"], ["goodbye", "Goodbye"]]);
   }
 
   createFile(fileConfig.path, content);
@@ -189,25 +110,16 @@ config.app.pull.target.forEach(fileConfig => {
     let content = "";
     let filePath = fileConfig.path.replace("<language>", lang);
 
-    switch (fileConfig.file_format) {
-      case "react_nested_json":
-        content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
-        break;
-      case "java_properties":
-        content = Object.values(sampleStrings.java_properties).join("\n");
-        break;
-      case "csv":
-        content = convertToDelimitedFormat(sampleStrings.csv, ",");
-        break;
-      case "tsv":
-        content = convertToDelimitedFormat(sampleStrings.tsv, "\t");
-        break;
-      case "xliff":
-        content = sampleStrings.xliff.replace(
-          `source-language="en"`,
-          `source-language="${lang}"`
-        );
-        break;
+    if (fileConfig.file_format === "react_nested_json") {
+      content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
+    } else if (fileConfig.file_format === "java_properties") {
+      content = Object.values(sampleStrings.java_properties).join("\n");
+    } else if (fileConfig.file_format === "tsx") {
+      content = sampleStrings.tsx;
+    } else if (fileConfig.file_format === "xliff") {
+      content = sampleStrings.xliff;
+    } else if (fileConfig.file_format === "xls") {
+      return createExcelFile(filePath, [["Key", "Translation"], ["welcome", "Bienvenido"], ["goodbye", "Adiós"]]);
     }
 
     createFile(filePath, content);
