@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // JSON configuration
 const config = {
@@ -10,44 +10,37 @@ const config = {
         {
           language: "en",
           file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/en/common.json",
-          tag: "storefront:i18n:common.json",
-          key_prefix: "storefront_i18n_common-"
-        },
-        {
-          language: "en",
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/en/mcms.json",
-          tag: "storefront:i18n:mcms.json",
-          key_prefix: "storefront_i18n_mcms-"
-        },
-        {
-          language: "en",
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/en/createuser.json",
-          tag: "storefront:i18n:createuser.json",
-          key_prefix: "storefront_i18n_createuser-"
-        },
-        {
-          language: "en",
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/en/rolesandprivileges.json",
-          tag: "storefront:i18n:rolesandprivileges.json",
-          key_prefix: "storefront_i18n_rolesandprivileges-"
-        },
-        {
-          language: "en",
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/en/profile.json",
-          tag: "storefront:i18n:profile.json",
-          key_prefix: "storefront_i18n_profile-"
+          path: "./localization/en/common.json",
+          tag: "localization:json:common",
+          key_prefix: "localization_common-"
         },
         {
           language: "en",
           file_format: "java_properties",
-          path: "./core-customize/hybris/bin/custom/markethub-financials/financialsfacades/resources/localization/financialsfacades-locales_en.properties",
-          tag: "storefront:java_properties:financialsfacades-locales",
-          key_prefix: "storefront:java_properties:financialsfacades-locales"
+          path: "./localization/en/common.properties",
+          tag: "localization:properties:common",
+          key_prefix: "localization_common-"
+        },
+        {
+          language: "en",
+          file_format: "csv",
+          path: "./localization/en/common.csv",
+          tag: "localization:csv:common",
+          key_prefix: "localization_common-"
+        },
+        {
+          language: "en",
+          file_format: "tsv",
+          path: "./localization/en/common.tsv",
+          tag: "localization:tsv:common",
+          key_prefix: "localization_common-"
+        },
+        {
+          language: "en",
+          file_format: "xliff",
+          path: "./localization/en/common.xliff",
+          tag: "localization:xliff:common",
+          key_prefix: "localization_common-"
         }
       ]
     },
@@ -56,44 +49,37 @@ const config = {
         {
           exclude_languages: ["en"],
           file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/<language>/common.json",
-          tag: "storefront:i18n:common.json",
-          key_prefix: "storefront_i18n_common-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/<language>/mcms.json",
-          tag: "storefront:i18n:mcms.json",
-          key_prefix: "storefront_i18n_mcms-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/<language>/createuser.json",
-          tag: "storefront:i18n:createuser.json",
-          key_prefix: "storefront_i18n_createuser-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/<language>/rolesandprivileges.json",
-          tag: "storefront:i18n:rolesandprivileges.json",
-          key_prefix: "storefront_i18n_rolesandprivileges-"
-        },
-        {
-          exclude_languages: ["en"],
-          file_format: "react_nested_json",
-          path: "./js-storefront/markethub/src/assets/i18n-assets/<language>/profile.json",
-          tag: "storefront:i18n:profile.json",
-          key_prefix: "storefront_i18n_profile-"
+          path: "./localization/<language>/common.json",
+          tag: "localization:json:common",
+          key_prefix: "localization_common-"
         },
         {
           exclude_languages: ["en"],
           file_format: "java_properties",
-          path: "./core-customize/hybris/bin/custom/markethub-financials/financialsfacades/resources/localization/financialsfacades-locales_<language>.properties",
-          tag: "storefront:java_properties:financialsfacades-locales",
-          key_prefix: "storefront:java_properties:financialsfacades-locales"
+          path: "./localization/<language>/common.properties",
+          tag: "localization:properties:common",
+          key_prefix: "localization_common-"
+        },
+        {
+          exclude_languages: ["en"],
+          file_format: "csv",
+          path: "./localization/<language>/common.csv",
+          tag: "localization:csv:common",
+          key_prefix: "localization_common-"
+        },
+        {
+          exclude_languages: ["en"],
+          file_format: "tsv",
+          path: "./localization/<language>/common.tsv",
+          tag: "localization:tsv:common",
+          key_prefix: "localization_common-"
+        },
+        {
+          exclude_languages: ["en"],
+          file_format: "xliff",
+          path: "./localization/<language>/common.xliff",
+          tag: "localization:xliff:common",
+          key_prefix: "localization_common-"
         }
       ]
     }
@@ -118,7 +104,45 @@ const sampleStrings = {
     cart: "cart=Shopping Cart",
     checkout: "checkout=Checkout",
     profile: "profile=User Profile"
-  }
+  },
+  csv: [
+    ["key", "value"],
+    ["welcome", "Welcome"],
+    ["goodbye", "Goodbye"],
+    ["cart", "Shopping Cart"],
+    ["checkout", "Checkout"],
+    ["profile", "User Profile"]
+  ],
+  tsv: [
+    ["key", "value"],
+    ["welcome", "Welcome"],
+    ["goodbye", "Goodbye"],
+    ["cart", "Shopping Cart"],
+    ["checkout", "Checkout"],
+    ["profile", "User Profile"]
+  ],
+  xliff: `<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file source-language="en" datatype="plaintext" original="messages">
+    <body>
+      <trans-unit id="welcome">
+        <source>Welcome</source>
+      </trans-unit>
+      <trans-unit id="goodbye">
+        <source>Goodbye</source>
+      </trans-unit>
+      <trans-unit id="cart">
+        <source>Shopping Cart</source>
+      </trans-unit>
+      <trans-unit id="checkout">
+        <source>Checkout</source>
+      </trans-unit>
+      <trans-unit id="profile">
+        <source>User Profile</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>`
 };
 
 // Function to create a file with sample content
@@ -129,14 +153,31 @@ function createFile(filePath, content) {
   console.log(`✅ Created: ${filePath}`);
 }
 
+// Function to convert CSV/TSV array to string format
+function convertToDelimitedFormat(array, delimiter) {
+  return array.map(row => row.join(delimiter)).join("\n");
+}
+
 // Generate source files
 config.app.push.source.forEach(fileConfig => {
   let content = "";
-  
-  if (fileConfig.file_format === "react_nested_json") {
-    content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
-  } else if (fileConfig.file_format === "java_properties") {
-    content = Object.values(sampleStrings.java_properties).join("\n");
+
+  switch (fileConfig.file_format) {
+    case "react_nested_json":
+      content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
+      break;
+    case "java_properties":
+      content = Object.values(sampleStrings.java_properties).join("\n");
+      break;
+    case "csv":
+      content = convertToDelimitedFormat(sampleStrings.csv, ",");
+      break;
+    case "tsv":
+      content = convertToDelimitedFormat(sampleStrings.tsv, "\t");
+      break;
+    case "xliff":
+      content = sampleStrings.xliff;
+      break;
   }
 
   createFile(fileConfig.path, content);
@@ -148,11 +189,25 @@ config.app.pull.target.forEach(fileConfig => {
     let content = "";
     let filePath = fileConfig.path.replace("<language>", lang);
 
-    if (fileConfig.file_format === "react_nested_json") {
-      content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
-    } else if (fileConfig.file_format === "java_properties") {
-      filePath = filePath.replace("<language>", lang);
-      content = Object.values(sampleStrings.java_properties).join("\n");
+    switch (fileConfig.file_format) {
+      case "react_nested_json":
+        content = JSON.stringify(sampleStrings.react_nested_json, null, 2);
+        break;
+      case "java_properties":
+        content = Object.values(sampleStrings.java_properties).join("\n");
+        break;
+      case "csv":
+        content = convertToDelimitedFormat(sampleStrings.csv, ",");
+        break;
+      case "tsv":
+        content = convertToDelimitedFormat(sampleStrings.tsv, "\t");
+        break;
+      case "xliff":
+        content = sampleStrings.xliff.replace(
+          `source-language="en"`,
+          `source-language="${lang}"`
+        );
+        break;
     }
 
     createFile(filePath, content);

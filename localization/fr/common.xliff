@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file source-language="fr" datatype="plaintext" original="messages">
+    <body>
+      <trans-unit id="welcome">
+        <source>Welcome</source>
+      </trans-unit>
+      <trans-unit id="goodbye">
+        <source>Goodbye</source>
+      </trans-unit>
+      <trans-unit id="cart">
+        <source>Shopping Cart</source>
+      </trans-unit>
+      <trans-unit id="checkout">
+        <source>Checkout</source>
+      </trans-unit>
+      <trans-unit id="profile">
+        <source>User Profile</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
