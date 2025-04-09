@@ -4,13 +4,9 @@
     "push": {
       "source": [
         {
-          "path": "./localization/en/common.tsv",
-          "file_format": "tsv",
-          "tag": "app:language.tsv",
-          "columnDescription": {
-            "KEY": 0,
-            "en": 1
-          },
+          "path": "./app.json",
+          "file_format": "nested_json",
+          "tag": "app:language.json",
           "language": "en"
         }
       ]
@@ -18,11 +14,9 @@
     "pull": {
       "target": [
         {
-          "path": "./localization/en/<language>.tsv",
-          "file_format": "tsv",
-          "tag": "app:language.tsv",
-          "excludeHeaderRow": true,
-          "excludeBaseLang": true,
+          "path": "./<language>.json",
+          "file_format": "nested_json",
+          "tag": "app:language.json",
           "exclude_languages": [
             "en"
           ]
