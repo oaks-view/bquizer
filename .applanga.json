@@ -4,14 +4,8 @@
     "push": {
       "source": [
         {
-          "path": "./app.json",
-          "file_format": "nested_json",
-          "tag": "app:language.json",
-          "language": "en"
-        },
-        {
           "path": "./package.json",
-          "file_format": "nested_json",
+          "file_format": "react_nested_json",
           "tag": "app:language.json",
           "language": "en"
         }
@@ -21,15 +15,7 @@
       "target": [
         {
           "path": "./<language>.json",
-          "file_format": "nested_json",
-          "tag": "app:language.json",
-          "exclude_languages": [
-            "en"
-          ]
-        },
-        {
-          "path": "./<language>.json",
-          "file_format": "nested_json",
+          "file_format": "react_nested_json",
           "tag": "app:language.json",
           "exclude_languages": [
             "en"
