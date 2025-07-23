@@ -1,0 +1,27 @@
+{
+  "app": {
+    "base_language": "en",
+    "push": {
+      "source": [
+        {
+          "path": "./localization/en/common.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
+          "language": "en"
+        }
+      ]
+    },
+    "pull": {
+      "target": [
+        {
+          "path": "./localization/en/<language>.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
+          "exclude_languages": [
+            "en"
+          ]
+        }
+      ]
+    }
+  }
+}
