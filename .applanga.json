@@ -4,9 +4,9 @@
     "push": {
       "source": [
         {
-          "path": "./localization/en/common.xliff",
-          "file_format": "xliff",
-          "tag": "app:Localizable.strings",
+          "path": "./package.json",
+          "file_format": "nested_json",
+          "tag": "app:language.json",
           "language": "en"
         }
       ]
@@ -14,9 +14,9 @@
     "pull": {
       "target": [
         {
-          "path": "./localization/en/<language>.xliff",
-          "file_format": "xliff",
-          "tag": "app:Localizable.strings",
+          "path": "./<language>.json",
+          "file_format": "nested_json",
+          "tag": "app:language.json",
           "exclude_languages": [
             "en"
           ]
