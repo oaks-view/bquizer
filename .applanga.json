@@ -8,15 +8,6 @@
           "file_format": "nested_json",
           "tag": "app:language.json",
           "language": "en"
-        },
-        {
-          "exclude_languages": [
-            "en"
-          ],
-          "language": "en-AU",
-          "file_format": "nested_json",
-          "path": "./en-AU.json",
-          "tag": ["app:language.json", "loading"]
         }
       ]
     },
@@ -29,6 +20,15 @@
           "exclude_languages": [
             "en"
           ]
+        },
+        {
+          "exclude_languages": [
+            "en"
+          ],
+          "language": "en-AU",
+          "file_format": "nested_json",
+          "path": "./en-AU.json",
+          "tag": ["enclave", "loading"]
         }
       ]
     }
