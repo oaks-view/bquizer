@@ -1,23 +1,5 @@
 name: Pull Target Files from Applanga
-on:
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: Pre-formatted --tag options for pulled entries (e.g. --tag login --tag error)
-        required: false
-        default: ''
-      pr_title:
-        description: Title for the pull request
-        required: false
-        default: Updated translations
-      commit_message:
-        description: Commit message for the PR
-        required: false
-        default: Updated translations
-      target_branch:
-        description: Target branch for the pull request
-        required: false
-        default: ''
+on: workflow_dispatch
 jobs:
   pull-translation-in:
     runs-on: ubuntu-latest
