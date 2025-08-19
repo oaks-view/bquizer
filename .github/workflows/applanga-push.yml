@@ -4,9 +4,7 @@ on:
     branches:
       - master
     paths:
-      - app.json
-      - package-lock.json
-      - package.json
+      - i18n/en/translations.xliff
   workflow_dispatch:
     inputs:
       push_targets:
