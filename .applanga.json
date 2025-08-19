@@ -1,0 +1,27 @@
+{
+  "app": {
+    "base_language": "en",
+    "push": {
+      "source": [
+        {
+          "path": "./app.json",
+          "file_format": "nested_json",
+          "tag": "app:language:3487.json",
+          "language": "en"
+        }
+      ]
+    },
+    "pull": {
+      "target": [
+        {
+          "path": "./<language>.json",
+          "file_format": "nested_json",
+          "tag": "app:language:3487.json",
+          "exclude_languages": [
+            "en"
+          ]
+        }
+      ]
+    }
+  }
+}
