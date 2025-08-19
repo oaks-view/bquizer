@@ -4,21 +4,9 @@
     "push": {
       "source": [
         {
-          "path": "./app.json",
-          "file_format": "nested_json",
-          "tag": "loading",
-          "language": "en"
-        },
-        {
-          "path": "./package-lock.json",
-          "file_format": "nested_json",
-          "tag": "app:language:4908.json",
-          "language": "en"
-        },
-        {
-          "path": "./package.json",
-          "file_format": "nested_json",
-          "tag": "app:language.json",
+          "path": "./i18n/en/translations.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
           "language": "en"
         }
       ]
@@ -26,25 +14,9 @@
     "pull": {
       "target": [
         {
-          "path": "./<language>.json",
-          "file_format": "nested_json",
-          "tag": "loading",
-          "exclude_languages": [
-            "en"
-          ]
-        },
-        {
-          "path": "./<language>.json",
-          "file_format": "nested_json",
-          "tag": "app:language:4908.json",
-          "exclude_languages": [
-            "en"
-          ]
-        },
-        {
-          "path": "./<language>.json",
-          "file_format": "nested_json",
-          "tag": "app:language.json",
+          "path": "./i18n/<language>.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
           "exclude_languages": [
             "en"
           ]
