@@ -1,0 +1,5 @@
+{
+  "first": "{gender, select,\n  male {\n    {itemCount, plural,\n      =0 {Ele não tem itens.}\n      one {Ele tem um item.}\n      other {Ele tem # itens.}\n    }\n  }\n  female {\n    {itemCount, plural,\n      =0 {Ela não tem itens.}\n      one {Ela tem um item.}\n      other {Ela tem # itens.}\n    }\n  }\n  other {\n    {itemCount, plural,\n      =0 {Elu não tem itens.}\n      one {Elu tem um item.}\n      other {Elu tem # itens.}\n    }\n  }\n}\n",
+  "hasCR": "isto tem \r retorno de carro \r aqui \n também",
+  "key with \r  HERE \r too \r and \n": "este é o Fácil"
+}

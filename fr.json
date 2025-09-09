@@ -1,0 +1,5 @@
+{
+  "first": "{gender, select,\n  male { \n {itemCount, plural,\n      =0 { Il n'a aucun objet. }\n      one { Il a un objet. }\n      other { Il a # objets. }\n    } \n }\n  female { \n {itemCount, plural,\n      =0 { Elle n'a aucun objet. }\n      one { Elle a un objet. }\n      other { Elle a # objets. }\n    } \n }\n  other { \n {itemCount, plural,\n      =0 { Ils n'ont aucun objet. }\n      one { Ils ont un objet. }\n      other { Ils ont # objets. }\n    } \n }\n}",
+  "hasCR": "il y a un \n transport, retournez \n ici aussi",
+  "key with \r  HERE \r too \r and \n": "celui-ci est le Easy"
+}
