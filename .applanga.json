@@ -4,9 +4,14 @@
     "push": {
       "source": [
         {
-          "path": "./localization/en/common.xliff",
-          "file_format": "xliff",
-          "tag": "app:language.xliff",
+          "path": "./i18n/en/translations.xlsx",
+          "file_format": "xls",
+          "tag": "app:language:3593.xls",
+          "columnDescription": {
+            "KEY": 0,
+            "en": 1
+          },
+          "excludeHeaderRow": true,
           "language": "en"
         }
       ]
@@ -14,9 +19,15 @@
     "pull": {
       "target": [
         {
-          "path": "./localization/en/<language>.xliff",
-          "file_format": "xliff",
-          "tag": "app:language.xliff",
+          "path": "./i18n/en/<language>.xlsx",
+          "file_format": "xls",
+          "tag": "app:language:3593.xls",
+          "excludeHeaderRow": true,
+          "excludeBaseLang": true,
+          "columnDescription": {
+            "KEY": 0,
+            "<language>": 1
+          },
           "exclude_languages": [
             "en"
           ]
