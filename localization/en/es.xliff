@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" target-language="es" date="2025-09-10T13:41:05Z" product-name="ICU Messaging PR" tool="Applanga">
+    <header>
+      <tool tool-name="Applanga"/>
+    </header>
+    <body>
+      <trans-unit id="first" x-length-option="equals-source">
+        <source>{gender, select,
+  male {
+    {itemCount, plural,
+      =0 {He has no items.}
+      one {He has one item.}
+      other {He has # items.}
+    }
+  }
+  female {
+    {itemCount, plural,
+      =0 {She has no items.}
+      one {She has one item.}
+      other {She has # items.}
+    }
+  }
+  other {
+    {itemCount, plural,
+      =0 {They have no items.}
+      one {They have one item.}
+      other {They have # items.}
+    }
+  }
+}
+</source>
+        <target>{gender, select,
+  male { 
+ {itemCount, plural,
+      =0 { No tiene ningún artículo. }
+      one { Tiene un artículo. }
+      other { Tiene # artículos. }
+    } 
+ }
+  female { 
+ {itemCount, plural,
+      =0 { Ella no tiene ningún artículo. }
+      one { Tiene un artículo. }
+      other { Tiene # artículos. }
+    } 
+ }
+  other { 
+ {itemCount, plural,
+      =0 { No tienen ningún artículo. }
+      one { Tienen un artículo. }
+      other { Tienen # artículos. }
+    } 
+ }
+}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" datatype="plaintext" target-language="es" date="2025-09-10T13:41:05Z" product-name="ICU Messaging PR" tool="Applanga" original="card-freeze-en-US.json">
+    <header>
+      <tool tool-name="Applanga"/>
+    </header>
+    <body>
+      <trans-unit id="hasCR" x-length-option="equals-source">
+        <source>this has &#xD; carriage rreturn &#xD; hereq 
+ too</source>
+        <target>aquí 
+ también se puede devolver el 
+ carruaje</target>
+      </trans-unit>
+      <trans-unit id="key with &#xD;  HERE &#xD; too &#xD; and &#xA;" x-length-option="equals-source">
+        <source>this one is the Easy</source>
+        <target>este es el Easy</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
