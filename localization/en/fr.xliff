@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" target-language="fr" date="2025-09-10T14:13:20Z" product-name="ICU Messaging PR" tool="Applanga">
+    <header>
+      <tool tool-name="Applanga"/>
+    </header>
+    <body>
+      <trans-unit id="first" x-length-option="equals-source">
+        <source>{gender, select,
+  male {
+    {itemCount, plural,
+      =0 {He has no items.}
+      one {He has one item.}
+      other {He has # items.}
+    }
+  }
+  female {
+    {itemCount, plural,
+      =0 {She has no items.}
+      one {She has one item.}
+      other {She has # items.}
+    }
+  }
+  other {
+    {itemCount, plural,
+      =0 {They have no items.}
+      one {They have one item.}
+      other {They have # items.}
+    }
+  }
+}
+</source>
+        <target>{gender, select,
+  male { 
+ {itemCount, plural,
+      =0 { Il n'a aucun objet. }
+      one { Il a un objet. }
+      other { Il a # objets. }
+    } 
+ }
+  female { 
+ {itemCount, plural,
+      =0 { Elle n'a aucun objet. }
+      one { Elle a un objet. }
+      other { Elle a # objets. }
+    } 
+ }
+  other { 
+ {itemCount, plural,
+      =0 { Ils n'ont aucun objet. }
+      one { Ils ont un objet. }
+      other { Ils ont # objets. }
+    } 
+ }
+}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" datatype="plaintext" target-language="fr" date="2025-09-10T14:13:20Z" product-name="ICU Messaging PR" tool="Applanga" original="card-freeze-en-US.json">
+    <header>
+      <tool tool-name="Applanga"/>
+    </header>
+    <body>
+      <trans-unit id="hasCR" x-length-option="equals-source">
+        <source>this has &#xD; carriage rreturn &#xD; hereq 
+ too</source>
+        <target>il y a un 
+ transport, retournez 
+ ici aussi</target>
+      </trans-unit>
+      <trans-unit id="key with &#xD;  HERE &#xD; too &#xD; and &#xA;" x-length-option="equals-source">
+        <source>this one is the Easy</source>
+        <target>celui-ci est le Easy</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
