@@ -4,15 +4,14 @@
     "push": {
       "source": [
         {
-          "path": "./app.json",
-          "file_format": "nested_json",
-          "tag": "app:language.json-1",
-          "language": "en"
-        },
-        {
-          "path": "./package.json",
-          "file_format": "react_nested_json",
-          "tag": "app:language.json",
+          "path": "./i18n/en/translations.xlsx",
+          "file_format": "xls",
+          "tag": "app:language.xls",
+          "columnDescription": {
+            "KEY": 0,
+            "en": 1
+          },
+          "excludeHeaderRow": true,
           "language": "en"
         }
       ]
@@ -20,17 +19,15 @@
     "pull": {
       "target": [
         {
-          "path": "./<language>.json",
-          "file_format": "nested_json",
-          "tag": "app:language.json-1",
-          "exclude_languages": [
-            "en"
-          ]
-        },
-        {
-          "path": "./<language>.json",
-          "file_format": "react_nested_json",
-          "tag": "app:language.json",
+          "path": "./i18n/en/<language>.xlsx",
+          "file_format": "xls",
+          "tag": "app:language.xls",
+          "excludeHeaderRow": true,
+          "excludeBaseLang": true,
+          "columnDescription": {
+            "KEY": 0,
+            "<language>": 1
+          },
           "exclude_languages": [
             "en"
           ]
