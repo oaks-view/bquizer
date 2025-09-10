@@ -4,8 +4,7 @@ on:
     branches:
       - master
     paths:
-      - app.json
-      - package.json
+      - i18n/en/translations.xlsx
   workflow_dispatch:
     inputs:
       push_targets:
