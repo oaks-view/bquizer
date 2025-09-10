@@ -19,7 +19,7 @@
     "pull": {
       "target": [
         {
-          "path": "./i18n/en/<language>.xlsx",
+          "path": "./i18n/<language>/translations.xlsx",
           "file_format": "xls",
           "tag": "app:language:3593.xls",
           "excludeHeaderRow": true,
