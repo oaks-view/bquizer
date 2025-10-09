@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" target-language="it" date="2025-10-09T17:38:25Z" product-name="Surens PR" tool="Applanga" original="Base Application">
+    <header>
+      <tool tool-name="Applanga"/>
+    </header>
+    <body>
+      <trans-unit id="Table 2681651900 - Field 883711285 - Property 2879900210" x-length-option="equals-source">
+        <source>Entry No.</source>
+        <target>Numero di Voce</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 3948098573 - Property 2879900210" x-length-option="equals-source">
+        <source>No. of Reminders</source>
+        <target>N. di Promemoria</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 3710982960 - Property 2879900210" x-length-option="equals-source">
+        <source>Posting Date</source>
+        <target>Data di Registrazione</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 580412389 - Property 2879900210" x-length-option="equals-source">
+        <source>Document Date</source>
+        <target>Data Documento</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 4085727052 - Property 2879900210" x-length-option="equals-source">
+        <source>Due Date</source>
+        <target>Data di Scadenza</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2363328873 - Property 2879900210" x-length-option="equals-source">
+        <source>Document Type</source>
+        <target>Tipo Documento</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 486908828 - Property 2879900210" x-length-option="equals-source">
+        <source>Document No.</source>
+        <target>N. Documento</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 3461834954 - Property 2879900210" x-length-option="equals-source">
+        <source>Description</source>
+        <target>Descrizione</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 1077555671 - Property 2879900210" x-length-option="equals-source">
+        <source>Original Amount</source>
+        <target>Importo Originale</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2975378708 - Property 2879900210" x-length-option="equals-source">
+        <source>Remaining Amount</source>
+        <target>Importo Residuo</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 4200184881 - Property 2879900210" x-length-option="equals-source">
+        <source>No.</source>
+        <target>N.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 636392376 - Property 2879900210" x-length-option="equals-source">
+        <source>Amount</source>
+        <target>Importo</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 1213267064 - Property 2879900210" x-length-option="equals-source">
+        <source>Interest Rate</source>
+        <target>Tasso di Interesse</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2139693550 - Property 2879900210" x-length-option="equals-source">
+        <source>Gen. Prod. Posting Group</source>
+        <target>Gruppo di Registrazione Prod. Gen.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 1246077090 - Property 2879900210" x-length-option="equals-source">
+        <source>VAT %</source>
+        <target>IVA %</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2971014054 - Property 2879900210" x-length-option="equals-source">
+        <source>VAT Calculation Type</source>
+        <target>Tipo di Calcolo IVA</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 1108276017 - Property 2879900210" x-length-option="equals-source">
+        <source>VAT Amount</source>
+        <target>Importo IVA</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2552458873 - Property 2879900210" x-length-option="equals-source">
+        <source>Tax Group Code</source>
+        <target>Codice Gruppo d'Imposta</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 236064653 - Property 2879900210" x-length-option="equals-source">
+        <source>VAT Prod. Posting Group</source>
+        <target>Gruppo di Registrazione Prod. IVA</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2534656220 - Property 2879900210" x-length-option="equals-source">
+        <source>VAT Identifier</source>
+        <target>Identificatore IVA</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 158172202 - Property 2879900210" x-length-option="equals-source">
+        <source>Line Type</source>
+        <target>Tipo di Riga</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 158172202 - Property 62802879" x-length-option="equals-source">
+        <source>Reminder Line,Not Due,Beginning Text,Ending Text,Rounding,On Hold,Additional Fee,Line Fee</source>
+        <target>Riga di Promemoria,Non Dovuto,Testo Iniziale,Testo Finale,Arrotondamento,Sospeso,Commissione Aggiuntiva,Tariffa di Linea</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2162283589 - Property 2879900210" x-length-option="equals-source">
+        <source>VAT Clause Code</source>
+        <target>Codice Clausola IVA</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 400684573 - Property 2879900210" x-length-option="equals-source">
+        <source>Applies-to Document Type</source>
+        <target>Si Applica al Tipo di Documento</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 677070472 - Property 2879900210" x-length-option="equals-source">
+        <source>Applies-to Document No.</source>
+        <target>Si Applica al N. Documento</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 1746606869 - Property 2879900210" x-length-option="equals-source">
+        <source>Detailed Interest Rates Entry</source>
+        <target>Voce Dettagliata Tassi di Interesse</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - Field 2283884360 - Property 2879900210" x-length-option="equals-source">
+        <source>System-Created Entry</source>
+        <target>Voce Creata dal Sistema</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 4094643921" x-length-option="equals-source">
+        <source>The %1 on the %2 and the %3 must be the same.</source>
+        <target>Il %1 su %2 e %3 devono essere lo stesso.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 1984498423" x-length-option="equals-source">
+        <source>%1 must be %2 or %3.</source>
+        <target>%1 deve essere %2 o %3.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 3593856238" x-length-option="equals-source">
+        <source>There is no open %1 with %2 %3.</source>
+        <target>Non c'è nessun %1 aperto con %2 %3.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 3459220650" x-length-option="equals-source">
+        <source>%1 %2 in %3 is not overdue.</source>
+        <target>%1 %2 in %3 non è scaduto.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 659963034" x-length-option="equals-source">
+        <source>The line fee for %1 %2 on reminder level %3 has already been issued.</source>
+        <target>La tariffa di linea per %1 %2 al livello di promemoria %3 è già stata emessa.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 885110970" x-length-option="equals-source">
+        <source>%1 must be positive.</source>
+        <target>%1 deve essere positivo.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 2618258002" x-length-option="equals-source">
+        <source>There is not enough space to insert lines with additional interest rates.</source>
+        <target>Non c'è abbastanza spazio per inserire righe con tassi di interesse aggiuntivi.</target>
+      </trans-unit>
+      <trans-unit id="Table 2681651900 - NamedType 2800588376" x-length-option="equals-source">
+        <source>Create interest rate with start date prior to %1.</source>
+        <target>Creare un tasso di interesse con data di inizio precedente a %1.</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Property 2879900210" x-length-option="equals-source">
+        <source>Reminder Terms</source>
+        <target>Termini di Promemoria</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 3004954119 - Property 2879900210" x-length-option="equals-source">
+        <source>Code</source>
+        <target>Codice</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 3461834954 - Property 2879900210" x-length-option="equals-source">
+        <source>Description</source>
+        <target>Descrizione</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 2757499274 - Property 2879900210" x-length-option="equals-source">
+        <source>Post Interest</source>
+        <target>Registra Interessi</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 3274756825 - Property 2879900210" x-length-option="equals-source">
+        <source>Post Additional Fee</source>
+        <target>Registra Commissione Aggiuntiva</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 55421187 - Property 2879900210" x-length-option="equals-source">
+        <source>Max. No. of Reminders</source>
+        <target>N. Max. di Promemoria</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 650382431 - Property 2879900210" x-length-option="equals-source">
+        <source>Minimum Amount (LCY)</source>
+        <target>Importo Minimo (LCY)</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 3410685676 - Property 2879900210" x-length-option="equals-source">
+        <source>Post Add. Fee per Line</source>
+        <target>Registra Comm. Aggiuntiva per Riga</target>
+      </trans-unit>
+      <trans-unit id="Table 3280694829 - Field 2009106446 - Property 2879900210" x-length-option="equals-source">
+        <source>Note About Line Fee on Report</source>
+        <target>Nota Sulla Tariffa di Linea sul Rapporto</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Property 2879900210" x-length-option="equals-source">
+        <source>Reminder Terms</source>
+        <target>Termini di Promemoria</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 3004954119 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies a code to identify this set of reminder terms.</source>
+        <target>Specifica un codice per identificare questo insieme di termini di promemoria.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 3461834954 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies a description of the reminder terms.</source>
+        <target>Specifica una descrizione dei termini di promemoria.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 55421187 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies the maximum number of reminders that can be created for an invoice.</source>
+        <target>Specifica il numero massimo di promemoria che possono essere creati per una fattura.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 2757499274 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies whether or not any interest listed on the reminder should be posted to the general ledger and customer accounts.</source>
+        <target>Specifica se gli interessi elencati nel promemoria devono essere contabilizzati nel libro mastro generale e nei conti clienti.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 3274756825 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies whether or not any additional fee listed on the reminder should be posted to the general ledger and customer accounts.</source>
+        <target>Specifica se eventuali commissioni aggiuntive elencate nel promemoria devono essere contabilizzate nel libro mastro generale e nei conti clienti.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 3410685676 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies whether or not any additional fee listed on the finance charge memo should be posted to the general ledger and customer accounts when the memo is issued.</source>
+        <target>Specifica se eventuali commissioni aggiuntive elencate nel promemoria delle spese finanziarie devono essere contabilizzate nel libro mastro generale e nei conti clienti quando il memo viene emesso.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 650382431 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies the minimum amount for which a reminder will be created.</source>
+        <target>Specifica l'importo minimo per il quale verrà creato un promemoria.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Control 2009106446 - Property 1295455071" x-length-option="equals-source">
+        <source>Specifies that any notes about line fees will be added to the reminder.</source>
+        <target>Specifica che eventuali note sulle commissioni di linea saranno aggiunte al promemoria.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Action 2050659749 - Property 2879900210" x-length-option="equals-source">
+        <source>&amp;Levels</source>
+        <target>&amp;Livelli</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Action 2050659749 - Property 1295455071" x-length-option="equals-source">
+        <source>View the reminder levels that are used to define when reminders can be created and what charges and texts they must include.</source>
+        <target>Visualizza i livelli di promemoria che sono usati per definire quando i promemoria possono essere creati e quali addebiti e testi devono includere.</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Action 1358710565 - Property 2879900210" x-length-option="equals-source">
+        <source>Translation</source>
+        <target>Traduzione</target>
+      </trans-unit>
+      <trans-unit id="Page 3280694829 - Action 1358710565 - Property 1295455071" x-length-option="equals-source">
+        <source>View the reminder text in any other languages that are set up for reminders.</source>
+        <target>Visualizza il testo del promemoria in qualsiasi altra lingua impostata per i promemoria.</target>
+      </trans-unit>
+      <trans-unit id="Table 1909723412 - Property 2879900210" x-length-option="equals-source">
+        <source>Reminder Terms Translation</source>
+        <target>Traduzione dei Termini di Promemoria</target>
+      </trans-unit>
+      <trans-unit id="Table 1909723412 - Field 1840439778 - Property 2879900210" x-length-option="equals-source">
+        <source>Reminder Terms Code</source>
+        <target>Codice Termini di Promemoria</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" datatype="plaintext" target-language="it" date="2025-10-09T17:38:25Z" product-name="Surens PR" tool="Applanga">
+    <header>
+      <tool tool-name="Applanga"/>
+    </header>
+    <body>
+      <trans-unit id="invitation.text" x-length-option="equals-source">
+        <source>Berlin Spring Break lip
+ Check</source>
+        <target>Fuga di Primavera a Berlino
+ Controlla</target>
+      </trans-unit>
+      <trans-unit id="invitation.Frame_1.Heading.text" x-length-option="equals-source">
+        <source>WaldDStraße 101, 10011, Berlin - PH</source>
+        <target>WaldDStraße 101, 10011, Berlino - PH</target>
+      </trans-unit>
+      <trans-unit id="invitation.Frame_1.text" x-length-option="equals-source">
+        <source>Q&amp;A{family: Inter; style: Regular; weight: 400;} - What does spring taste like? 
+Heard it might be Cherry flavor.</source>
+        <target>Q&amp;A{family: Inter; style: Regular; weight: 400;} - Qual è il sapore della primavera? 
+Ho sentito dire che potrebbe essere al gusto di ciliegia.</target>
+      </trans-unit>
+      <trans-unit id="invitation.Frame_1.text.0" x-length-option="equals-source">
+        <source>Meetup and connect, SPRING IS GREAT</source>
+        <target>Incontrati e connettiti, LA PRIMAVERA È FANTASTICA</target>
+      </trans-unit>
+      <trans-unit id="invitation.text.0" x-length-option="equals-source">
+        <source>mar 2023</source>
+        <target>mar 2023</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
