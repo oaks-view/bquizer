@@ -1,0 +1,27 @@
+{
+  "app": {
+    "base_language": "en",
+    "push": {
+      "source": [
+        {
+          "path": "./i18n/en/translations.xliff",
+          "file_format": "xliff",
+          "tag": "app:language.json",
+          "language": "en"
+        }
+      ]
+    },
+    "pull": {
+      "target": [
+        {
+          "path": "./i18n/en/<language>.xliff",
+          "file_format": "xliff",
+          "tag": "app:language.json",
+          "exclude_languages": [
+            "en"
+          ]
+        }
+      ]
+    }
+  }
+}
