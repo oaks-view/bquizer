@@ -6,7 +6,6 @@
         {
           "path": "./localization/en/common.tsv",
           "file_format": "tsv",
-          "tag": "app:language.tsv",
           "columnDescription": {
             "KEY": 0,
             "en": 1
@@ -17,7 +16,7 @@
         {
           "path": "./localization/en/common.xliff",
           "file_format": "xliff",
-          "tag": "app:language.xliff",
+          "tag": "null",
           "language": "en"
         },
         {
