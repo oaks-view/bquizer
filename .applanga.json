@@ -16,7 +16,7 @@
         {
           "path": "./localization/en/common.xliff",
           "file_format": "xliff",
-          "tag": "null",
+          "tag": null,
           "language": "en"
         },
         {
