@@ -4,22 +4,6 @@
     "push": {
       "source": [
         {
-          "path": "./localization/en/common.tsv",
-          "file_format": "tsv",
-          "columnDescription": {
-            "KEY": 0,
-            "en": 1
-          },
-          "excludeHeaderRow": true,
-          "language": "en"
-        },
-        {
-          "path": "./localization/en/common.xliff",
-          "file_format": "xliff",
-          "tag": null,
-          "language": "en"
-        },
-        {
           "path": "./i18n/en/translations.xliff",
           "file_format": "xliff",
           "tag": "app:language.json",
@@ -29,28 +13,6 @@
     },
     "pull": {
       "target": [
-        {
-          "path": "./localization/en/<language>.tsv",
-          "file_format": "tsv",
-          "tag": "app:language.tsv",
-          "excludeHeaderRow": true,
-          "excludeBaseLang": true,
-          "columnDescription": {
-            "KEY": 0,
-            "<language>": 1
-          },
-          "exclude_languages": [
-            "en"
-          ]
-        },
-        {
-          "path": "./localization/en/<language>.xliff",
-          "file_format": "xliff",
-          "tag": "app:language.xliff",
-          "exclude_languages": [
-            "en"
-          ]
-        },
         {
           "path": "./i18n/en/<language>.xliff",
           "file_format": "xliff",
