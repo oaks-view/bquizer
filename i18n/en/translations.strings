@@ -1,0 +1,35 @@
+/* Home screen title */
+"app.home.title" = "Welcome back";
+
+/* Home screen subtitle */
+"app.home.subtitle" = "Continue where you left off";
+
+/* Primary save button */
+"app.button.save" = "Save";
+
+/* Cancel button */
+"app.button.cancel" = "Cancel";
+
+/* Delete button */
+"app.button.delete" = "Delete";
+
+/* Generic network error */
+"app.error.network" = "Something went wrong. Please check your connection.";
+
+/* Validation message */
+"app.error.required_field" = "This field is required.";
+
+/* Profile page title */
+"app.profile.title" = "Your profile";
+
+/* Edit profile button */
+"app.profile.edit" = "Edit profile";
+
+/* Settings page title */
+"app.settings.title" = "Settings";
+
+/* Language setting label */
+"app.settings.language" = "Language";
+
+/* Logout confirmation message */
+"app.logout.confirm" = "Are you sure you want to log out?";
