@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="app.home.title" xml:space="preserve">
+    <value>Welcome back</value>
+    <comment>Home screen title</comment>
+  </data>
+  <data name="app.home.subtitle" xml:space="preserve">
+    <value>Continue where you left off</value>
+    <comment>Home screen subtitle</comment>
+  </data>
+  <data name="app.button.save" xml:space="preserve">
+    <value>Save</value>
+    <comment>Primary save button</comment>
+  </data>
+  <data name="app.button.cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel button</comment>
+  </data>
+  <data name="app.button.delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Delete button</comment>
+  </data>
+  <data name="app.error.network" xml:space="preserve">
+    <value>Something went wrong. Please check your connection.</value>
+    <comment>Generic network error</comment>
+  </data>
+  <data name="app.error.required_field" xml:space="preserve">
+    <value>This field is required.</value>
+    <comment>Validation message</comment>
+  </data>
+  <data name="app.profile.title" xml:space="preserve">
+    <value>Your profile</value>
+    <comment>Profile page title</comment>
+  </data>
+  <data name="app.profile.edit" xml:space="preserve">
+    <value>Edit profile</value>
+    <comment>Edit profile button</comment>
+  </data>
+  <data name="app.settings.title" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Settings page title</comment>
+  </data>
+  <data name="app.settings.language" xml:space="preserve">
+    <value>Language</value>
+    <comment>Language setting label</comment>
+  </data>
+  <data name="app.logout.confirm" xml:space="preserve">
+    <value>Are you sure you want to log out?</value>
+    <comment>Logout confirmation message</comment>
+  </data>
+  <data name="app.items.count.one" xml:space="preserve">
+    <value>You have {0} item</value>
+    <comment>Singular item count</comment>
+  </data>
+  <data name="app.items.count.other" xml:space="preserve">
+    <value>You have {0} items</value>
+    <comment>Plural item count</comment>
+  </data>
+</root>
