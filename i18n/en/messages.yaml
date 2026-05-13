@@ -1,0 +1,29 @@
+app:
+  home:
+    title: "Welcome back"
+    subtitle: "Continue where you left off"
+
+  button:
+    save: "Save"
+    cancel: "Cancel"
+    delete: "Delete"
+
+  error:
+    network: "Something went wrong. Please check your connection."
+    required_field: "This field is required."
+
+  profile:
+    title: "Your profile"
+    edit: "Edit profile"
+
+  settings:
+    title: "Settings"
+    language: "Language"
+
+  logout:
+    confirm: "Are you sure you want to log out?"
+
+  items:
+    count:
+      one: "You have {{count}} item"
+      other: "You have {{count}} items"
