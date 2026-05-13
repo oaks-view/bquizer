@@ -1,0 +1,27 @@
+[app.home]
+title = "Welcome back"
+subtitle = "Continue where you left off"
+
+[app.button]
+save = "Save"
+cancel = "Cancel"
+delete = "Delete"
+
+[app.error]
+network = "Something went wrong. Please check your connection."
+required_field = "This field is required."
+
+[app.profile]
+title = "Your profile"
+edit = "Edit profile"
+
+[app.settings]
+title = "Settings"
+language = "Language"
+
+[app.logout]
+confirm = "Are you sure you want to log out?"
+
+[app.items.count]
+one = "You have {{count}} item"
+other = "You have {{count}} items"
