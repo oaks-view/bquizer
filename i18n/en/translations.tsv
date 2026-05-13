@@ -1,0 +1,13 @@
+key	en	de	description
+app.home.title	Welcome back	Willkommen zurück	Home screen title
+app.home.subtitle	Continue where you left off	Mach dort weiter, wo du aufgehört hast	Home screen subtitle
+app.button.save	Save	Speichern	Primary save button
+app.button.cancel	Cancel	Abbrechen	Cancel button
+app.button.delete	Delete	Löschen	Delete button
+app.error.network	Something went wrong. Please check your connection.	Etwas ist schiefgelaufen. Bitte überprüfe deine Verbindung.	Generic network error
+app.error.required_field	This field is required.	Dieses Feld ist erforderlich.	Validation message
+app.profile.title	Your profile	Dein Profil	Profile page title
+app.profile.edit	Edit profile	Profil bearbeiten	Edit profile button
+app.settings.title	Settings	Einstellungen	Settings page title
+app.settings.language	Language	Sprache	Language setting label
+app.logout.confirm	Are you sure you want to log out?	Möchtest du dich wirklich abmelden?	Logout confirmation message
