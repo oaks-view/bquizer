@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sample App 1.0\n"
+"Report-Msgid-Bugs-To: support@example.com\n"
+"POT-Creation-Date: 2026-05-13 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. Home screen title
+msgctxt "app.home.title"
+msgid "Welcome back"
+msgstr ""
+
+#. Home screen subtitle
+msgctxt "app.home.subtitle"
+msgid "Continue where you left off"
+msgstr ""
+
+#. Primary save button
+msgctxt "app.button.save"
+msgid "Save"
+msgstr ""
+
+#. Cancel button
+msgctxt "app.button.cancel"
+msgid "Cancel"
+msgstr ""
+
+#. Delete button
+msgctxt "app.button.delete"
+msgid "Delete"
+msgstr ""
+
+#. Generic network error
+msgctxt "app.error.network"
+msgid "Something went wrong. Please check your connection."
+msgstr ""
+
+#. Validation message
+msgctxt "app.error.required_field"
+msgid "This field is required."
+msgstr ""
+
+#. Profile page title
+msgctxt "app.profile.title"
+msgid "Your profile"
+msgstr ""
+
+#. Edit profile button
+msgctxt "app.profile.edit"
+msgid "Edit profile"
+msgstr ""
+
+#. Settings page title
+msgctxt "app.settings.title"
+msgid "Settings"
+msgstr ""
+
+#. Language setting label
+msgctxt "app.settings.language"
+msgid "Language"
+msgstr ""
+
+#. Logout confirmation message
+msgctxt "app.logout.confirm"
+msgid "Are you sure you want to log out?"
+msgstr ""
+
+#. Item count message
+msgctxt "app.items.count"
+msgid "You have %d item"
+msgid_plural "You have %d items"
+msgstr[0] ""
+msgstr[1] ""
