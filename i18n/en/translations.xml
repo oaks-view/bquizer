@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_home_title">Welcome back</string>
+    <string name="app_home_subtitle">Continue where you left off</string>
+    <string name="app_button_save">Save</string>
+    <string name="app_button_cancel">Cancel</string>
+    <string name="app_button_delete">Delete</string>
+    <string name="app_error_network">Something went wrong. Please check your connection.</string>
+    <string name="app_error_required_field">This field is required.</string>
+    <string name="app_profile_title">Your profile</string>
+    <string name="app_profile_edit">Edit profile</string>
+    <string name="app_settings_title">Settings</string>
+    <string name="app_settings_language">Language</string>
+    <string name="app_logout_confirm">Are you sure you want to log out?</string>
+
+    <plurals name="app_items_count">
+        <item quantity="one">You have %d item</item>
+        <item quantity="other">You have %d items</item>
+    </plurals>
+</resources>
