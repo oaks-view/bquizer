@@ -1,0 +1,74 @@
+{
+  "@@locale": "en",
+
+  "appHomeTitle": "Welcome back",
+  "@appHomeTitle": {
+    "description": "Home screen title"
+  },
+
+  "appHomeSubtitle": "Continue where you left off",
+  "@appHomeSubtitle": {
+    "description": "Home screen subtitle"
+  },
+
+  "appButtonSave": "Save",
+  "@appButtonSave": {
+    "description": "Primary save button"
+  },
+
+  "appButtonCancel": "Cancel",
+  "@appButtonCancel": {
+    "description": "Cancel button"
+  },
+
+  "appButtonDelete": "Delete",
+  "@appButtonDelete": {
+    "description": "Delete button"
+  },
+
+  "appErrorNetwork": "Something went wrong. Please check your connection.",
+  "@appErrorNetwork": {
+    "description": "Generic network error"
+  },
+
+  "appErrorRequiredField": "This field is required.",
+  "@appErrorRequiredField": {
+    "description": "Validation message"
+  },
+
+  "appProfileTitle": "Your profile",
+  "@appProfileTitle": {
+    "description": "Profile page title"
+  },
+
+  "appProfileEdit": "Edit profile",
+  "@appProfileEdit": {
+    "description": "Edit profile button"
+  },
+
+  "appSettingsTitle": "Settings",
+  "@appSettingsTitle": {
+    "description": "Settings page title"
+  },
+
+  "appSettingsLanguage": "Language",
+  "@appSettingsLanguage": {
+    "description": "Language setting label"
+  },
+
+  "appLogoutConfirm": "Are you sure you want to log out?",
+  "@appLogoutConfirm": {
+    "description": "Logout confirmation message"
+  },
+
+  "appItemsCount": "{count, plural, =1{You have 1 item} other{You have {count} items}}",
+  "@appItemsCount": {
+    "description": "Item count message",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  }
+}
