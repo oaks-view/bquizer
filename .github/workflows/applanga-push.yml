@@ -3,8 +3,7 @@ on:
   push:
     branches:
       - master
-    paths:
-      - package.json
+    paths: []
   workflow_dispatch:
     inputs:
       push_targets:
@@ -28,11 +27,12 @@ jobs:
         if: '${{ inputs.push_targets != true }}'
         env:
           APPLANGA_ACCESS_TOKEN: ${{ secrets.APPLANGA_ACCESS_TOKEN }}
-        run: applanga --debug push --force
+          APPLANGA_API_HOST: ${{ secrets.APPLANGA_API_HOST }}
+        run: applanga --debug push --force --fail-on-error
         working-directory: checkout
       - name: Push Translation Files to Applanga
         if: '${{ inputs.push_targets == true }}'
         env:
           APPLANGA_ACCESS_TOKEN: '${{ secrets.APPLANGA_ACCESS_TOKEN }}'
-        run: applanga --debug pushtarget
+        run: applanga --debug pushtarget --fail-on-error
         working-directory: checkout
