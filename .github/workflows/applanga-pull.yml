@@ -62,7 +62,8 @@ jobs:
       - name: Pull translations from Applanga
         env:
           APPLANGA_ACCESS_TOKEN: ${{ secrets.APPLANGA_ACCESS_TOKEN }}
-        run: 'applanga --debug pull ${{ github.event.inputs.tags }} ${{ github.event.inputs.languages }}'
+          APPLANGA_API_HOST: ${{ secrets.APPLANGA_API_HOST }}
+        run: 'applanga --debug pull --fail-on-error ${{ github.event.inputs.tags }} ${{ github.event.inputs.languages }}'
         working-directory: checkout
       - name: Cleanup .applanga.json override
         if: env.APPLANGA_JSON_WAS_CREATED_OR_MODIFIED == 'true'
