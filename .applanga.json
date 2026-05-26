@@ -6,9 +6,7 @@
         {
           "path": "./package.json",
           "file_format": "angular_translate_json",
-          "tag": [
-            "app:language:2377.json"
-          ],
+          "tag": "app:language:2377.json",
           "language": "en"
         }
       ]
