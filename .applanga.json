@@ -4,9 +4,14 @@
     "push": {
       "source": [
         {
-          "path": "./package.json",
-          "file_format": "angular_translate_json",
-          "tag": "app:language:2377.json",
+          "path": "./i18n/en/translations.tsv",
+          "file_format": "tsv",
+          "tag": "app:language.tsv",
+          "columnDescription": {
+            "KEY": 0,
+            "en": 1
+          },
+          "excludeHeaderRow": true,
           "language": "en"
         }
       ]
@@ -14,9 +19,15 @@
     "pull": {
       "target": [
         {
-          "path": "./<language>.json",
-          "file_format": "angular_translate_json",
-          "tag": "app:language:2377.json",
+          "path": "./i18n/en/<language>.tsv",
+          "file_format": "tsv",
+          "tag": "app:language.tsv",
+          "columnDescription": {
+            "KEY": 0,
+            "<language>": 1
+          },
+          "excludeHeaderRow": true,
+          "excludeBaseLang": true,
           "exclude_languages": [
             "en"
           ]
