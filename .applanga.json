@@ -4,13 +4,11 @@
     "push": {
       "source": [
         {
-          "path": "./app.json",
-          "file_format": "i18next_json",
-          "tag": "app:translations.json",
-          "keepTagIds": true,
-          "skipNonStringValues": true,
-          "key_prefix": "click",
-          "remove_cr_char": true,
+          "path": "./i18n/en/translations.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
+          "onlyAsDraft": true,
+          "keepTagIds": false,
           "language": "en"
         }
       ]
@@ -18,10 +16,9 @@
     "pull": {
       "target": [
         {
-          "path": "./<language>.json",
-          "file_format": "i18next_json",
-          "tag": "app:translations.json",
-          "key_prefix": "click",
+          "path": "./i18n/en/<language>.xliff",
+          "file_format": "xliff",
+          "tag": "app:Localizable.strings",
           "exclude_languages": [
             "en"
           ]
