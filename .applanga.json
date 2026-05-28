@@ -4,14 +4,13 @@
     "push": {
       "source": [
         {
-          "path": "./i18n/en/translations.tsv",
-          "file_format": "tsv",
-          "tag": "app:language.tsv",
-          "columnDescription": {
-            "KEY": 0,
-            "en": 1
-          },
-          "excludeHeaderRow": true,
+          "path": "./app.json",
+          "file_format": "i18next_json",
+          "tag": "app:translations.json",
+          "keepTagIds": true,
+          "skipNonStringValues": true,
+          "key_prefix": "click",
+          "remove_cr_char": true,
           "language": "en"
         }
       ]
@@ -19,15 +18,10 @@
     "pull": {
       "target": [
         {
-          "path": "./i18n/en/<language>.tsv",
-          "file_format": "tsv",
-          "tag": "app:language.tsv",
-          "columnDescription": {
-            "KEY": 0,
-            "<language>": 1
-          },
-          "excludeHeaderRow": true,
-          "excludeBaseLang": true,
+          "path": "./<language>.json",
+          "file_format": "i18next_json",
+          "tag": "app:translations.json",
+          "key_prefix": "click",
           "exclude_languages": [
             "en"
           ]
