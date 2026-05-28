@@ -16,7 +16,7 @@
     "pull": {
       "target": [
         {
-          "path": "./i18n/en/<language>.toml",
+          "path": "./i18n/<language>/trans.toml",
           "file_format": "toml",
           "tag": "app:language.toml",
           "exclude_languages": [
