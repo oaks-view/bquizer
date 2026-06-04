@@ -1,0 +1,27 @@
+{
+  "app": {
+    "base_language": "en",
+    "push": {
+      "source": [
+        {
+          "path": "./i18n/en/messages.php",
+          "file_format": "laravel_php",
+          "tag": "app:language.php",
+          "language": "en"
+        }
+      ]
+    },
+    "pull": {
+      "target": [
+        {
+          "path": "./i18n/en/<language>.php",
+          "file_format": "laravel_php",
+          "tag": "app:language.php",
+          "exclude_languages": [
+            "en"
+          ]
+        }
+      ]
+    }
+  }
+}
