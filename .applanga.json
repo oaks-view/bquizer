@@ -4,9 +4,9 @@
     "push": {
       "source": [
         {
-          "path": "./i18n/en/messages.php",
-          "file_format": "laravel_php",
-          "tag": "app:language.php",
+          "path": "./i18n/en/Resources.resx",
+          "file_format": "microsoft_resx",
+          "tag": "app:language.resx",
           "language": "en"
         }
       ]
@@ -14,9 +14,9 @@
     "pull": {
       "target": [
         {
-          "path": "./i18n/en/<language>.php",
-          "file_format": "laravel_php",
-          "tag": "app:language.php",
+          "path": "./i18n/en/<language>.resx",
+          "file_format": "microsoft_resx",
+          "tag": "app:language.resx",
           "exclude_languages": [
             "en"
           ]
