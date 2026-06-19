@@ -10,6 +10,10 @@ on:
         description: Title for the pull request
         required: false
         default: Updated translations
+      languages:
+        description: Languages whose entries will be pulled
+        required: false
+        default: ''
       commit_message:
         description: Commit message for the PR
         required: false
