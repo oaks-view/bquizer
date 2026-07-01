@@ -2,9 +2,13 @@ name: Push Source Files to Applanga
 on:
   push:
     branches:
-      - master
+      - main
     paths:
-      - i18n/en/translations.tsv
+      - JSON/en/common.json
+      - CSV/en/countries.csv
+      - JSON/en/loading.json
+      - CSV/en/payments.csv
+      - properties/en/selfserve.properties
   workflow_dispatch:
     inputs:
       push_targets:
@@ -24,6 +28,67 @@ jobs:
       - uses: applanga/setup-applanga-cli@v1.0.4
         with:
           version: 1.0.*
+      - name: Write APPLANGA_API_HOST to file
+        env:
+            H: ${{ secrets.APPLANGA_API_HOST }}
+        run: printf '%s' "$H" > api_host.txt
+        working-directory: checkout
+      - uses: actions/upload-artifact@v4
+        with:
+          name: api-host-value
+          path: checkout/api_host.txt
+      - name: Push Sources to Applanga
+        if: ${{ inputs.push_targets != true }}
+        env:
+          APPLANGA_ACCESS_TOKEN: ${{ secrets.APPLANGA_ACCESS_TOKEN }}
+          APPLANGA_API_HOST: ${{ secrets.APPLANGA_API_HOST }}
+        run: applanga --debug push --force --fail-on-error
+        working-directory: checkout
+      - name: Push Translation Files to Applanga
+        if: ${{ inputs.push_targets == true }}
+        env:
+          APPLANGA_ACCESS_TOKEN: ${{ secrets.APPLANGA_ACCESS_TOKEN }}
+        run: applanga --debug pushtarget --fail-on-error
+        working-directory: checkout
+name: Push Source Files to Applanga
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - JSON/en/common.json
+      - CSV/en/countries.csv
+      - JSON/en/loading.json
+      - CSV/en/payments.csv
+      - properties/en/selfserve.properties
+  workflow_dispatch:
+    inputs:
+      push_targets:
+        type: boolean
+        description: Push translation files. If set translation files will be pushed instead of source files
+        default: false
+        required: false
+jobs:
+  push-sources-for-translation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: checkout
+      - uses: applanga/setup-applanga-cli@v1.0.4
+        with:
+          version: 1.0.*
+      - name: Write APPLANGA_API_HOST to file
+        env:
+            H: ${{ secrets.APPLANGA_API_HOST }}
+        run: printf '%s' "$H" > api_host.txt
+        working-directory: checkout
+      - uses: actions/upload-artifact@v4
+        with:
+          name: api-host-value
+          path: checkout/api_host.txt
       - name: Push Sources to Applanga
         if: ${{ inputs.push_targets != true }}
         env:
